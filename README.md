@@ -1,1 +1,1 @@
-# rofi
+# usr-share-rofi-themes
