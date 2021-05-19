@@ -9,11 +9,11 @@
 * {
     red:                         #001c00;
     blue:                        #74923a;
-    lightfg:                     #81A14040;
+    lightfg:                     #81A140;
     lightbg:                     #617b30;
     foreground:                  #234f1e;
-    background:                  #A3BF4540;
-    background-color:            #D2E19040;
+    background:                  #A3BF45;
+    background-color:            #00000000;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @red;
@@ -28,8 +28,8 @@
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
+    alternate-normal-foreground: @background;
+    alternate-normal-background: @blue;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
