@@ -7,13 +7,13 @@
  */
 
 * {
-    red:                         rgba ( 204, 23, 3, 100 % );
-    blue:                        rgba ( 161, 96, 71, 100 % );
-    lightfg:                     rgba ( 234, 230, 231, 100 % );
-    lightbg:                     rgba ( 0, 0, 0, 100 % );
-    foreground:                  rgba ( 255, 255, 255, 100 % );
-    background:                  rgba ( 85, 20, 0, 30 % );
-    background-color:            rgba ( 254, 182, 15, 20 % );
+    red:                         #87b0e666;
+    blue:                        #2aa1b733;
+    lightfg:                     #6ad6ef;
+    lightbg:                     #0e82b040;
+    foreground:                  #6ad6ef;
+    background:                  #094e621a;
+    background-color:            #073351;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -60,6 +60,12 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 0px 0px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

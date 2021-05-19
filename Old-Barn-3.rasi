@@ -38,7 +38,7 @@
 }
 window {
     background-color: @background;
-    border:           1;
+    border:           0;
     padding:          5;
 }
 mainbox {
@@ -61,9 +61,15 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-icon {
+    size:             2.5em ;
+}
+element {
+  orientation: horizontal;
+}
 element {
     border:           0;
-    padding:          1px ;
+    padding:          2px ;
 }
 element normal.normal {
     background-color: @normal-background;

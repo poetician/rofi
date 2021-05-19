@@ -38,8 +38,8 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           8;
+    padding:          8;
 }
 mainbox {
     border:           0;
@@ -61,9 +61,15 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-icon {
+    size:             3.5em ;
+}
+element {
+  orientation: horizontal;
+}
 element {
     border:           0;
-    padding:          1px ;
+    padding:          4px ;
 }
 element normal.normal {
     background-color: @normal-background;

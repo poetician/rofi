@@ -1,19 +1,19 @@
 /**
- * Base16 oomox-Ail.JPG ROFI Color theme
+ * Base16 oomox-Turquoise ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-Ail.JPG
+ *  Scheme: oomox-Turquoise
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 18, 2, 2, 100 % );
-    blue:                        rgba ( 106, 93, 102, 100 % );
-    lightfg:                     rgba ( 188, 181, 177, 100 % );
-    lightbg:                     rgba ( 40, 40, 40, 40 % );
-    foreground:                  rgba ( 0, 0, 0, 100 % );
-    background:                  rgba ( 188, 181, 177, 100 % );
-    background-color:            rgba ( 188, 181, 177, 0 % );
+    red:                         #073351;
+    blue:                        #2aa1b7;
+    lightfg:                     #87b0e6;
+    lightbg:                     #0e82b0;
+    foreground:                  #6ad6ef;
+    background:                  #094e62;
+    background-color:            #416289;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -38,38 +38,38 @@
 }
 window {
     background-color: @background;
-    border:           0;
-    padding:          5;
+    border:           6;
+    padding:          3;
 }
 mainbox {
-    border:           0;
-    padding:          5;
+    border:           6;
+    padding:          3;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           1px dash 3px 3px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          1px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           3px dash 0px 0px ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          3px ;
     scrollbar:        true;
-    padding:          5px 0px 0px ;
+    padding:          3px 0px 0px ;
 }
 element-icon {
-    size:             1.7em ;
+    size:             2em ;
 }
 element {
-  orientation:        horizontal;
+  orientation: horizontal;
 }
 element {
-    border:           0;
-    padding:          2px ;
+    border:           6;
+    padding:          3px ;
 }
 element normal.normal {
     background-color: @normal-background;

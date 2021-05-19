@@ -34,16 +34,16 @@
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
-    spacing:                     2;
+    spacing:                     4;
 }
 window {
     background-color: @background;
     border:           5;
-    padding:          0;
+    padding:          3;
 }
 mainbox {
-    border:           0;
-    padding:          3;
+    border:           3;
+    padding:          6;
 }
 message {
     border:           1px dash 0px 0px ;
@@ -60,6 +60,12 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 0px 0px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

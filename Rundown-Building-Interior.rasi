@@ -38,11 +38,11 @@
 }
 window {
     background-color: @background;
-    border:           1;
+    border:           0;
     padding:          5;
 }
 mainbox {
-    border:           0;
+    border:           4;
     padding:          0;
 }
 message {
@@ -62,8 +62,8 @@ listview {
     padding:          2px 0px 0px ;
 }
 element {
-    border:           0;
-    padding:          1px ;
+    border:           2;
+    padding:          2px ;
 }
 element normal.normal {
     background-color: @normal-background;

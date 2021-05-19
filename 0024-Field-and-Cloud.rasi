@@ -12,8 +12,8 @@
     lightfg:                     rgba ( 186, 209, 203, 100 % );
     lightbg:                     rgba ( 17, 17, 17, 10 % );
     foreground:                  rgba ( 195, 202, 58, 90 % );
-    background:                  rgba ( 0, 18, 0, 10 % );
-    background-color:            rgba ( 0, 18, 0, 10 % );
+    background:                  rgba ( 0, 18, 0, 40 % );
+    background-color:            rgba ( 0, 18, 0, 40 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @red;
@@ -39,11 +39,11 @@
 window {
     background-color: @background;
     border:           0;
-    padding:          5;
+    padding:          15;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           5;
+    padding:          5;
 }
 message {
     border:           1px dash 0px 0px ;
@@ -60,6 +60,12 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 0px 0px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

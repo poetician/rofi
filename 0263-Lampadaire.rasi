@@ -9,26 +9,26 @@
 * {
     red:                         rgba ( 164, 130, 125, 10 % );
     blue:                        rgba ( 72, 128, 154, 100 % );
-    lightfg:                     rgba ( 137, 155, 162, 100 % );
-    lightbg:                     rgba ( 54, 51, 51, 100 % );
+    lightfg:                     rgba ( 197, 218, 227, 100 % );
+    lightbg:                     rgba ( 54, 51, 51, 80 % );
     foreground:                  rgba ( 222, 218, 220, 40 % );
-    background:                  rgba ( 29, 27, 28, 80 % );
+    background:                  rgba ( 29, 27, 28, 60 % );
     background-color:            rgba ( 29, 27, 28, 20 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
+    selected-normal-background:  @foreground;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @lightfg;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @lightfg;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -60,6 +60,12 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 0px 0px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

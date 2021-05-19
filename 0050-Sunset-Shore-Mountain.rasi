@@ -38,17 +38,17 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          15;
 }
 mainbox {
     border:           0;
-    padding:          0;
+    padding:          15;
 }
 message {
     border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          15px ;
 }
 textbox {
     text-color:       @foreground;
@@ -59,11 +59,17 @@ listview {
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          2px 0px 0px ;
+    padding:          5px 5px 5px ;
+}
+element-icon {
+    size:             2.5em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;
-    padding:          1px ;
+    padding:          5px ;
 }
 element normal.normal {
     background-color: @normal-background;

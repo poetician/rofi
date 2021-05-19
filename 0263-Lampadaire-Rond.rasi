@@ -61,6 +61,12 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-icon {
+    size:             2em ;
+}
+element {
+ 	orientation:	  horizontal;
+}
 element {
     border:           0;
     padding:          4px ;

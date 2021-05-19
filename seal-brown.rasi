@@ -1,54 +1,54 @@
 /**
- * Base16 oomox-Ail.JPG ROFI Color theme
+ * Base16 oomox-seal brown ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-Ail.JPG
+ *  Scheme: oomox-seal brown
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 18, 2, 2, 100 % );
-    blue:                        rgba ( 106, 93, 102, 100 % );
-    lightfg:                     rgba ( 188, 181, 177, 100 % );
-    lightbg:                     rgba ( 40, 40, 40, 40 % );
-    foreground:                  rgba ( 0, 0, 0, 100 % );
-    background:                  rgba ( 188, 181, 177, 100 % );
-    background-color:            rgba ( 188, 181, 177, 0 % );
+    red:                         #f80059;
+    blue:                        #5ba2b6;
+    lightfg:                     #980000;
+    lightbg:                     #cb0000;
+    foreground:                  #FF554D;
+    background:                  #650000;
+    background-color:            #320000;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
+    selected-normal-background:  @background-color;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-background:           @lightfg;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
+    alternate-normal-background: @lightfg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
-    spacing:                     2;
+    spacing:                     3;
 }
 window {
     background-color: @background;
     border:           0;
-    padding:          5;
+    padding:          7;
 }
 mainbox {
     border:           0;
-    padding:          5;
+    padding:          3;
 }
 message {
     border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          3px ;
 }
 textbox {
     text-color:       @foreground;
@@ -59,17 +59,17 @@ listview {
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          5px 0px 0px ;
-}
-element-icon {
-    size:             1.7em ;
-}
-element {
-  orientation:        horizontal;
+    padding:          4px 3px 2px ;
 }
 element {
     border:           0;
-    padding:          2px ;
+    padding:          3px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -108,11 +108,11 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
-    border:           0;
+    width:            6px ;
+    border:           1;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
-    padding:          0;
+    padding:          1;
 }
 sidebar {
     border:           2px dash 0px 0px ;

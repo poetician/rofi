@@ -1,22 +1,22 @@
 /**
- * Base16 oomox-Ail.JPG ROFI Color theme
+ * Base16 oomox-orange-rainbow ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-Ail.JPG
+ *  Scheme: oomox-orange-rainbow
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 18, 2, 2, 100 % );
-    blue:                        rgba ( 106, 93, 102, 100 % );
-    lightfg:                     rgba ( 188, 181, 177, 100 % );
-    lightbg:                     rgba ( 40, 40, 40, 40 % );
-    foreground:                  rgba ( 0, 0, 0, 100 % );
-    background:                  rgba ( 188, 181, 177, 100 % );
-    background-color:            rgba ( 188, 181, 177, 0 % );
+    red:                         #fcae1e;
+    blue:                        #6680400b;
+    lightfg:                     #fa8128;
+    lightbg:                     #80ec9706;
+    foreground:                  #8a3324;
+    background:                  #be5504;
+    background-color:            #8080400b;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @foreground;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -24,13 +24,13 @@
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
     normal-background:           @background;
-    active-foreground:           @blue;
-    active-background:           @background;
+    active-foreground:           @red;
+    active-background:           @foreground;
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
     alternate-normal-background: @lightbg;
-    alternate-active-foreground: @blue;
+    alternate-active-foreground: @foreground;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
@@ -38,17 +38,17 @@
 }
 window {
     background-color: @background;
-    border:           0;
-    padding:          5;
+    border:           2;
+    padding:          8;
 }
 mainbox {
     border:           0;
-    padding:          5;
+    padding:          2;
 }
 message {
     border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          2px ;
 }
 textbox {
     text-color:       @foreground;
@@ -59,21 +59,21 @@ listview {
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          5px 0px 0px ;
+    padding:          2px 0px 0px ;
 }
 element-icon {
-    size:             1.7em ;
+    size:             2em ;
 }
 element {
-  orientation:        horizontal;
+  orientation: horizontal;
 }
 element {
-    border:           0;
-    padding:          2px ;
+    border:           2;
+    padding:          4px ;
 }
 element normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color: @background;
+    text-color:       @red;
 }
 element normal.urgent {
     background-color: @urgent-background;
@@ -97,7 +97,7 @@ element selected.active {
 }
 element alternate.normal {
     background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    text-color:       @red;
 }
 element alternate.urgent {
     background-color: @alternate-urgent-background;
@@ -128,8 +128,8 @@ button selected {
 }
 inputbar {
     spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
+    text-color:       @red;
+    padding:          4px ;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
@@ -138,11 +138,11 @@ case-indicator {
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @red;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @red;
 }
 textbox-prompt-colon {
     expand:           false;

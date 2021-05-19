@@ -34,32 +34,38 @@
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
-    spacing:                     2;
+    spacing:                     4;
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          15;
 }
 mainbox {
     border:           0;
-    padding:          0;
+    padding:          12;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           3px dash 3px 3px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          3px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           2px dash 2px 2px ;
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          2px 0px 0px ;
+    padding:          5px 5px 5px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

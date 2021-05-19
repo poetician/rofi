@@ -38,28 +38,34 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          20;
 }
 mainbox {
     border:           0;
-    padding:          0;
+    padding:          20;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           1px dash 6px 6px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          6px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           2px dash 6px 6px ;
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          2px 0px 0px ;
+    padding:          2px 6px 6px ;
+}
+element-icon {
+    size:             2em ;
+}
+element {
+  orientation: horizontal;
 }
 element {
     border:           0;

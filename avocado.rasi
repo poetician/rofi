@@ -1,24 +1,24 @@
 /**
- * Base16 oomox-Ail.JPG ROFI Color theme
+ * Base16 oomox-avocado_2 ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-Ail.JPG
+ *  Scheme: oomox-avocado_2
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 18, 2, 2, 100 % );
-    blue:                        rgba ( 106, 93, 102, 100 % );
-    lightfg:                     rgba ( 188, 181, 177, 100 % );
-    lightbg:                     rgba ( 40, 40, 40, 40 % );
-    foreground:                  rgba ( 0, 0, 0, 100 % );
-    background:                  rgba ( 188, 181, 177, 100 % );
-    background-color:            rgba ( 188, 181, 177, 0 % );
+    red:                         #001c00;
+    blue:                        #74923a;
+    lightfg:                     #81A14040;
+    lightbg:                     #617b30;
+    foreground:                  #234f1e;
+    background:                  #A3BF4540;
+    background-color:            #D2E19040;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
-    selected-active-foreground:  @background;
+    selected-normal-foreground:  @red;
+    selected-normal-background:  @blue;
+    selected-active-foreground:  @red;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
@@ -39,16 +39,16 @@
 window {
     background-color: @background;
     border:           0;
-    padding:          5;
+    padding:          9;
 }
 mainbox {
     border:           0;
-    padding:          5;
+    padding:          9;
 }
 message {
     border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          1px ;
 }
 textbox {
     text-color:       @foreground;
@@ -59,17 +59,17 @@ listview {
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          5px 0px 0px ;
+    padding:          2px 0px 0px ;
 }
 element-icon {
-    size:             1.7em ;
+    size:             2.5em ;
 }
 element {
-  orientation:        horizontal;
+  orientation: horizontal;
 }
 element {
     border:           0;
-    padding:          2px ;
+    padding:          4px ;
 }
 element normal.normal {
     background-color: @normal-background;

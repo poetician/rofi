@@ -16,7 +16,7 @@
     background-color:            rgba ( 17, 0, 0, 50 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @foregroung;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @red;
     selected-active-background:  @blue;
@@ -38,12 +38,12 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          15;
 }
 mainbox {
     border:           0;
-    padding:          0;
+    padding:          10;
 }
 message {
     border:           1px dash 0px 0px ;
@@ -61,9 +61,15 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation:        vertical;
+}
 element {
     border:           0;
-    padding:          1px ;
+    padding:          8px ;
 }
 element normal.normal {
     background-color: @normal-background;
