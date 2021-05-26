@@ -40,20 +40,20 @@ window {
     background-color: @background;
     border:           0 1 0 10;
     border-radius:    20;
-    padding:          0 0 0 0;
+    padding:          1 1 0 10;
     x-offset:         -40;
     y-offset:         -20;
 }
 mainbox {
     border:           0 1 0 10;
-    border-radius:    21;
-    padding:          0px 0px 0px 0px;
+    border-radius:    20;
+    padding:          1px 1px 0px 10px;
 }
 message {
     border:           0 1 0 10;
-    border-radius:    22;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    padding:          0px 0px 0px 0px ;
+    padding:          1px 1px 0px 10px ;
 }
 textbox {
     text-color:       @foreground;
@@ -61,11 +61,11 @@ textbox {
 listview {
     fixed-height:     0;
     border:           0 1 0 10;
-    border-radius:    23;
+    border-radius:    20;
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        false;
-    padding:          0px 0px 0px 0px;
+    padding:          1px 1px 0px 10px;
 }
 element-icon {
     size:             3em ;
@@ -138,12 +138,12 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px ;
-    border-spacing:   0 0 0 0;
-    border:           0px 0px 0px 10px ;
-    border-radius:    20%;
+    padding:          5px;
+    border-spacing:   2 1 0 10;
+    border:           2px 1px 0px 10px ;
+    border-radius:    40%;
     spacing:          10px;
-    margin:           0px 0px 0px;
+    margin:           5px 5px 5px;
     border-color:     @foreground;
     text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
