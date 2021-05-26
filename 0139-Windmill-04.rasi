@@ -1,36 +1,39 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0139 Windmill ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0139 Windmill
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    pink:                        #DF1D8F66;
+    yellow:                      #F1D45C66;
+    orange:                      #864E4F;
+    red:                         #BF695F1a;
+    blue:                        #917C5166;
+    lightfg:                     #6476731a;
+    lightbg:                     #333638cc;
+    foreground:                  #FEE6D0cc;
+    background:                  #864E4F66;
+    background-color:            #00000000;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
+    selected-normal-foreground:  @foreground;
+    selected-normal-background:  @yellow;
     selected-active-foreground:  @background;
-    selected-active-background:  @blue;
+    selected-active-background:  @orange;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
     normal-background:           @background;
     active-foreground:           @blue;
-    active-background:           @background;
+    active-background:           @red;
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
-    alternate-active-foreground: @blue;
+    alternate-normal-background: @pink;
+    alternate-active-foreground: @red;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
@@ -38,32 +41,43 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           10 0 0 0;
+    padding:          10 0 0 0;
+    x-offset:         -100;
+    y-offset:         -60;
 }
 mainbox {
-    border:           0;
+    border:           10 0 0 0;
     padding:          0;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          0px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           6px 0px 0px 0px ;
     border-color:     @separatorcolor;
     spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    scrollbar:        false;
+    padding:          4px 0px 0px 0px;
+}
+element-icon {
+    size:             3em ;
+}
+element-text{
+    horizontal-align: 0.50;
 }
 element {
-    border:           0;
-    padding:          1px ;
+    orientation: vertical;
+}
+element {
+    border:           10 0 0 0;
+    padding:          5px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -113,7 +127,7 @@ sidebar {
     border-color:     @separatorcolor;
 }
 button {
-    spacing:          0;
+    spacing:          4;
     text-color:       @normal-foreground;
 }
 button selected {
@@ -121,12 +135,15 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5px;
+    border-spacing:   0 0 0 0;
+    border:           5px;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-case-indicator {
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
 }

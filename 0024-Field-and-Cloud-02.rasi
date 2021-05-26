@@ -1,22 +1,22 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0024 Montane ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0024 Montane
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         rgba ( 54, 74, 88, 70 % );
+    blue:                        rgba ( 173, 203, 198, 80 % );
+    lightfg:                     rgba ( 186, 209, 203, 90 % );
+    lightbg:                     rgba ( 17, 17, 17, 30 % );
+    foreground:                  rgba ( 195, 202, 58, 90 % );
+    background:                  rgba ( 0, 18, 0, 30 % );
+    background-color:            rgba ( 0, 18, 0, 30 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @red;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -38,15 +38,17 @@
 }
 window {
     background-color: @background;
-    border:           1;
+    border:           5;
     padding:          5;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           5;
+    border-radius:    5;
+    padding:          10;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           5px dash 0px 0px ;
+    border-radius:    25;
     border-color:     @separatorcolor;
     padding:          1px ;
 }
@@ -55,15 +57,32 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           4px dash 0px 0px ;
+    border-radius:    25;
     border-color:     @separatorcolor;
     spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    scrollbar:        false;
+    padding:          4px 0px 0px ;
 }
 element {
-    border:           0;
-    padding:          1px ;
+    border:           1;
+    border-radius:    20;
+    padding:          20px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation:        vertical;
+}
+element-text {
+      horizontal-align: 0.45;
+}
+element {
+    border:           20;
+    border-color:     @background;
+    border-radius:    20;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;

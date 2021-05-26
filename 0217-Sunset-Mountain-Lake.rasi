@@ -12,8 +12,8 @@
     lightfg:                     rgba ( 205, 200, 201, 100 % );
     lightbg:                     rgba ( 102, 102, 102, 30 % );
     foreground:                  rgba ( 205, 200, 201, 100 % );
-    background:                  rgba ( 51, 51, 51, 90 % );
-    background-color:            rgba ( 51, 51, 51, 40 % );
+    background:                  rgba ( 51, 51, 51, 100 % );
+    background-color:            rgba ( 51, 51, 51, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @foreground;
@@ -60,12 +60,6 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 2px 2px ;
-}
-element-icon {
-    size:             2em ;
-}
-element {
-  orientation: horizontal;
 }
 element {
     border:           3;

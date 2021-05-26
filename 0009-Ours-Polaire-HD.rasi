@@ -7,13 +7,14 @@
  */
 
 * {
+    black:                       #000000;
     red:                         #704B15;
     blue:                        #5E606Bb3;
-    lightfg:                     #000000;
+    lightfg:                     #0200201a;
     lightbg:                     #232633;
     foreground:                  #D9EFF4b3;
     background:                  #D9EFF4;
-    background-color:            #D9EFF4b3;
+    background-color:            #000000b3;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @foreground;
@@ -38,45 +39,49 @@
 }
 window {
     background-color: @lightbg;
-    border:           8;
-    padding:          0;
+    border:           8px 4px 8px 4px;
+    border-radius:    8;
+    padding:          8;
     y-offset:         24;
-    x-offset:         -30;
+    x-offset:         -32;
 }
 mainbox {
-    border:           2;
-    padding:          2;
+    border:           8px 4px 8px 4px;
+    border-radius:    8px;
+    padding:          8px;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           8 4 8 4;
+    border-radius:    8;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          8px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           8 4 8 4;
+    border-radius:    16px;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    spacing:          8px ;
+    scrollbar:        false;
+    padding:          4px 4px 4px 4px ;
 }
 element-text{
-    vertical-align: 0.50;
+    vertical-align:   0.50;
     text-color:       inherit;
 }
 element-icon {
     size:             3em ;
 }
 element {
-  orientation: horizontal;
+  orientation:        horizontal;
 }
 element {
-    border:           5;
-    border-radius:    20;
-    padding:          5px ;
+    border:           8 4 8 4;
+    border-radius:    24;
+    padding:          0px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -116,13 +121,13 @@ element alternate.active {
 }
 scrollbar {
     width:            0px ;
-    border:           0;
+    border:           8 4 8 4;
     handle-color:     @normal-foreground;
     handle-width:     0px ;
     padding:          0;
 }
 sidebar {
-    border:           2px dash 0px 0px ;
+    border:           8 4 8 4;
     border-color:     @separatorcolor;
 }
 button {
@@ -134,22 +139,30 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
+    padding:          0px;
+    border-spacing:   0 0 0 0;
+    border:           8;
+    border-radius:    40%;
     spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    margin:           0px;
+    border-color:     @foreground;
+    text-color:       @background;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+case-indicator {
+    spacing:          0;
+    text-color:       @background;
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @background;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @background;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @background;
 }
 textbox-prompt-colon {
     expand:           false;

@@ -1,23 +1,25 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0217 Sunset Mountain Lake ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0217 Sunset Mountain Lake
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    orange:                      #FE727180;
+    black:                       #000000b3;
+    red:                         rgba ( 247, 74, 54, 50 % );
+    blue:                        rgba ( 153, 203, 235, 40 % );
+    lightfg:                     rgba ( 205, 200, 201, 100 % );
+    lightbg:                     rgba ( 102, 102, 102, 30 % );
+    foreground:                  rgba ( 205, 200, 201, 80 % );
+    background:                  rgba ( 51, 51, 51, 80 % );
+    background-color:            rgba ( 51, 51, 51, 0 % );
     separatorcolor:              @foreground;
-    border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
+    border-color:                @orange;
+    selected-normal-foreground:  @foreground;
+    selected-normal-background:  @red;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
@@ -37,33 +39,50 @@
     spacing:                     2;
 }
 window {
-    background-color: @background;
-    border:           1;
-    padding:          5;
+    background-color: @blue;
+    border:           4 8 16 8;
+    border-radius:    20;
+    padding:          8;
+    x-offset:         -40;
+    y-offset:         160;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           4 8 16 8;
+    border-radius:    8;
+    padding:          4;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           2px dash 4px 8px ;
+    border-radius:    8;
     border-color:     @separatorcolor;
     padding:          1px ;
 }
 textbox {
     text-color:       @foreground;
+    padding:          4;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           2 4 8 4;
+    border-radius:    8;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    spacing:          12px ;
+    scrollbar:        false;
+    padding:          4px 2px 4px 2px ;
+}
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           0;
-    padding:          1px ;
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.45;
+}
+element {
+    border:           4 8 16 8;
+    border-radius:    8;
+    padding:          2;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -109,7 +128,9 @@ scrollbar {
     padding:          0;
 }
 sidebar {
-    border:           2px dash 0px 0px ;
+    border:           4 8 16 8;
+    border-radius:    8;
+    padding:          4;
     border-color:     @separatorcolor;
 }
 button {
@@ -121,10 +142,19 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5px;
+    border-spacing:   4 8 16 8;
+    border:           2 4 8 4;
+    border-radius:    40%;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    padding:          4;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+case-indicator {
+    spacing:          0;
+    text-color:       @normal-foreground;
 }
 case-indicator {
     spacing:          0;

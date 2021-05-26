@@ -10,10 +10,10 @@
     red:                         rgba ( 126, 75, 34, 100 % );
     blue:                        rgba ( 92, 92, 60, 100 % );
     lightfg:                     rgba ( 240, 239, 230, 100 % );
-    lightbg:                     rgba ( 68, 24, 4, 80 % );
+    lightbg:                     rgba ( 0, 0, 0, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
-    background:                  rgba ( 34, 12, 0, 70 % );
-    background-color:            rgba ( 34, 12, 0, 20 % );
+    background:                  rgba ( 34, 12, 0, 100 % );
+    background-color:            rgba ( 34, 12, 0, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -38,17 +38,17 @@
 }
 window {
     background-color: @background;
-    border:           0;
-    padding:          10;
+    border:           1;
+    padding:          5;
 }
 mainbox {
     border:           0;
-    padding:          5;
+    padding:          0;
 }
 message {
     border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          1px ;
 }
 textbox {
     text-color:       @foreground;
@@ -59,17 +59,11 @@ listview {
     border-color:     @separatorcolor;
     spacing:          2px ;
     scrollbar:        true;
-    padding:          5px 0px 0px ;
-}
-element-icon {
-    size:             3em ;
-}
-element {
-  orientation: horizontal;
+    padding:          2px 0px 0px ;
 }
 element {
     border:           0;
-    padding:          3px ;
+    padding:          1px ;
 }
 element normal.normal {
     background-color: @normal-background;

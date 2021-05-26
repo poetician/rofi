@@ -1,34 +1,36 @@
 /**
- * Base16 oomox-avocado_2 ROFI Color theme
+ * Base16 avocado_2 ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-avocado_2
+ *  Scheme: avocado_2
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ *  Customization: Poetician Edition (https://github.com/poetician)
  */
 
 * {
+    green:                       #d2e190;
     red:                         #001c00;
-    blue:                        #74923a;
+    blue:                        #74923acc;
     lightfg:                     #81A140;
-    lightbg:                     #617b30;
-    foreground:                  #234f1e;
-    background:                  #A3BF45;
-    background-color:            #00000000;
+    lightbg:                     #617b3066;
+    foreground:                  #234f1ecc;
+    background:                  #00000066;
+    background-color:            #A3BF4566;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @red;
-    selected-normal-background:  @blue;
+    selected-normal-background:  @green;
     selected-active-foreground:  @red;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @green;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @background;
+    alternate-normal-foreground: @green;
     alternate-normal-background: @blue;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -38,12 +40,12 @@
 }
 window {
     background-color: @background;
-    border:           0;
-    padding:          9;
+    border:           9;
+    padding:          0;
 }
 mainbox {
-    border:           0;
-    padding:          9;
+    border:           9;
+    padding:          0;
 }
 message {
     border:           1px dash 0px 0px ;
@@ -52,6 +54,7 @@ message {
 }
 textbox {
     text-color:       @foreground;
+    vertical-align: 1;
 }
 listview {
     fixed-height:     0;
@@ -60,16 +63,20 @@ listview {
     spacing:          2px ;
     scrollbar:        true;
     padding:          2px 0px 0px ;
+    layout:           vertical;
 }
 element-icon {
-    size:             2.5em ;
+    size:             3em;
 }
 element {
-  orientation: horizontal;
+    orientation: vertical;
+}
+element-text {
+    horizontal-align: 0.50;
 }
 element {
-    border:           0;
-    padding:          4px ;
+    border:           10;
+    padding:          0px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -138,11 +145,11 @@ case-indicator {
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @green;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @green;
 }
 textbox-prompt-colon {
     expand:           false;

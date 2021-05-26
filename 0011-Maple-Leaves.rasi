@@ -1,19 +1,19 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0011 Maple Leaves_1010 ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0011 Maple Leaves_1010
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
-* {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+ * {
+    red:                         #CC1703;
+    blue:                        #A1604766;
+    lightfg:                     #EAE6E7;
+    lightbg:                     #D90000;
+    foreground:                  #FEB60F;
+    background:                  #5514001a;
+    background-color:            #551400;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -23,7 +23,7 @@
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-background:           @blue;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
@@ -38,16 +38,22 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           10;
+    border-radius:    25;
+    padding:          10;
+    x-offset:         -80;
+    y-offset:         -30;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           10;
+    border-radius:    25;
+    border-color:     @background;
+    padding:          10;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 1px 0px ;
     border-color:     @separatorcolor;
+    border-radius:    25;
     padding:          1px ;
 }
 textbox {
@@ -55,15 +61,27 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           10px dash 1px 0px ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    border-radius:    25;
+    spacing:          12px ;
+    scrollbar:        false;
+    padding:          5px 2px 0px ;
+}
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           0;
-    padding:          1px ;
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.55;
+}
+element {
+    border:           20;
+    border-color:     @background;
+    border-radius:    25;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -102,8 +120,9 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
+    width:            0px ;
     border:           0;
+    border-radius:    15;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;

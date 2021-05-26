@@ -7,13 +7,14 @@
  */
 
 * {
+    black:                       #000000;
     red:                         #f80059;
     blue:                        #5ba2b6;
     lightfg:                     #980000;
     lightbg:                     #cb0000;
     foreground:                  #FF554D;
     background:                  #650000;
-    background-color:            #320000;
+    background-color:            #32000040;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -22,8 +23,8 @@
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
-    normal-background:           @lightfg;
+    normal-foreground:           @background;
+    normal-background:           @lightbg;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
@@ -38,35 +39,50 @@
 }
 window {
     background-color: @background;
-    border:           0;
-    padding:          7;
+    border:           5;
+    border-radius:    10px;
+    padding:          15;
+    x-offset:         -80;
+    y-offset:         -40;
 }
 mainbox {
-    border:           0;
-    padding:          3;
+    border:           5;
+    border-radius:    10px;
+    padding:          15;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           5px dash 1px 0px ;
+    border-radius:    10px;
     border-color:     @separatorcolor;
-    padding:          3px ;
+    padding:          15px ;
 }
 textbox {
-    text-color:       @foreground;
+    text-color:       @background;
+    border:           5;
+    border-radius:    10px;
+    padding:          15px;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           6px dash 2px 0px ;
+    border-radius:    10px;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          4px 3px 2px ;
+    spacing:          10px ;
+    scrollbar:        false;
+    padding:          9px 3px 0px ;
 }
 element {
-    border:           0;
-    padding:          3px ;
+    border:           5;
+    border-radius:    10px;
+    padding:          15px ;
 }
 element-icon {
-    size:             2em ;
+    size:             2.5em ;
+    padding:          5px;
+}
+element-text {
+    vertical-align:   0.50;
+    text-color:       red;
 }
 element {
   orientation: horizontal;

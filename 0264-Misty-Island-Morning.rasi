@@ -11,7 +11,7 @@
     blue:                        rgba ( 86, 103, 84, 50 % );
     lightfg:                     rgba ( 192, 177, 168, 100 % );
     lightbg:                     rgba ( 23, 39, 26, 70 % );
-    foreground:                  rgba ( 215, 215, 215, 100 % );
+    foreground:                  rgba ( 215, 215, 215, 10 % );
     background:                  rgba ( 23, 39, 26,30 % );
     background-color:            rgba ( 23, 39, 26, 30 % );
     separatorcolor:              @foreground;
@@ -22,13 +22,13 @@
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @lightfg;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @lightfg;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -37,39 +37,53 @@
     spacing:                     2;
 }
 window {
+    anchor:           east;
     background-color: @background;
-    border:           0;
-    padding:          10;
+    border:           15;
+    border-radius:    10;
+    padding:          5;
+    x-offset:         -60px;
+    y-offset:         -20px;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           15;
+    border-radius:    10;
+    padding:          5;
 }
 message {
     border:           1px dash 0px 0px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          5px ;
 }
 textbox {
     text-color:       @foreground;
+    border:           5px;
+    border-radius:    10px;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           3px dash 0px 0px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
-    spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    spacing:          3px ;
+    scrollbar:        false;
+    padding:          3px 0px 0px ;
 }
 element-icon {
-    size:             2em ;
+    size:             3em ;
 }
 element {
-  orientation:        vertical;
+  orientation:        horizontal;
+}
+element-text {
+      vertical-align: 0.5;
 }
 element {
-    border:           0;
-    padding:          4px ;
+    border:           5;
+    border-radius:    10;
+    border-color:     @red;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;

@@ -1,45 +1,45 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-Old Mill_Rounded ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-Old Mill_Rounded
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         rgba ( 126, 75, 34, 20 % );
+    blue:                        rgba ( 92, 92, 60, 80 % );
+    lightfg:                     rgba ( 201, 207, 60, 20 % );
+    lightbg:                     rgba ( 0, 0, 0, 30 % );
+    foreground:                  rgba ( 208, 185, 177, 90 % );
+    background:                  rgba ( 34, 12, 0, 10 % );
+    background-color:            rgba ( 34, 12, 0, 10 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @foreground;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @background;
+    selected-active-foreground:  @foreground;
     selected-active-background:  @blue;
-    selected-urgent-foreground:  @background;
+    selected-urgent-foreground:  @lightbg;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
     normal-background:           @background;
-    active-foreground:           @blue;
+    active-foreground:           @foreground;
     active-background:           @background;
-    urgent-foreground:           @red;
+    urgent-foreground:           @foreground;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
     alternate-normal-background: @lightbg;
-    alternate-active-foreground: @blue;
+    alternate-active-foreground: @foreground;
     alternate-active-background: @lightbg;
-    alternate-urgent-foreground: @red;
+    alternate-urgent-foreground: @foreground;
     alternate-urgent-background: @lightbg;
-    spacing:                     2;
+    spacing:                     1;
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          10;
 }
 mainbox {
     border:           0;

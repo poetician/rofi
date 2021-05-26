@@ -1,19 +1,19 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0137 Flower Gradient ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0137 Flower Gradient
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         rgba ( 110, 78, 145, 50 % );
+    blue:                        rgba ( 38, 50, 104, 50 % );
+    lightfg:                     rgba ( 255, 255, 255, 100 % );
+    lightbg:                     rgba ( 30, 18, 38, 40 % );
+    foreground:                  rgba ( 254, 230, 231, 50 % );
+    background:                  rgba ( 30, 30, 30, 20 % );
+    background-color:            rgba ( 30, 18, 38, 20 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -38,15 +38,20 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           30;
+    border-radius:    20;
+    padding:          1;
+    x-offset:         -80;
+    y-offset:         -10;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           20;
+    border-radius:    0;
+    padding:          1;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
     padding:          1px ;
 }
@@ -55,15 +60,32 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
     spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    scrollbar:        false;
+    padding:          3px 0px 0px ;
 }
 element {
     border:           0;
-    padding:          1px ;
+    border-radius:    20;
+    padding:          20px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.45;
+}
+element {
+    border:           20;
+    border-color:     @background;
+    border-radius:    20;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -121,12 +143,19 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    border-radius:    40%;
+    padding:          5px;
+    border-spacing:   5px 0 0 0;
+    border:           5px;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-case-indicator {
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    case-indicator {
+    spacing:          0;
+    text-color:       @normal-foreground;}
+    case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
 }

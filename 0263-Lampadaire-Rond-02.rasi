@@ -1,22 +1,22 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0263 Lampadaire_Rond ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0263 Lampadaire_Rond
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         rgba ( 164, 130, 125, 100 % );
+    blue:                        rgba ( 72, 128, 154, 100 % );
+    lightfg:                     rgba ( 137, 155, 162, 100 % );
+    lightbg:                     rgba ( 54, 51, 51, 50 % );
+    foreground:                  rgba ( 222, 218, 220, 100 % );
+    background:                  rgba ( 29, 27, 28, 80 % );
+    background-color:            rgba ( 29, 27, 28, 10 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @background;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -38,8 +38,8 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           0;
+    padding:          10;
 }
 mainbox {
     border:           0;
@@ -61,8 +61,18 @@ listview {
     scrollbar:        true;
     padding:          2px 0px 0px ;
 }
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.50;
+}
 element {
     border:           0;
+    border-radius:    25;
     padding:          1px ;
 }
 element normal.normal {

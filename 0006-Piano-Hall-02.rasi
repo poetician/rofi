@@ -39,19 +39,19 @@
 window {
     anchor:           east;
     background-color: @background;
-    border:           10;
+    border:           5;
     border-radius:    10;
     padding:          5;
     x-offset:         -40px;
-    y-offset:         -40px;
+    y-offset:         -60px;
 }
 mainbox {
-    border:           5;
+    border:           1;
     border-radius:    5;
     padding:          5;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           3px dash 3px 3px ;
     border-radius:    20;
     border-color:     @separatorcolor;
     padding:          5px ;
@@ -61,12 +61,12 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           3px dash 0px 0px ;
+    border:           7px dash 7px 7px ;
     border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          3px ;
+    spacing:          7px ;
     scrollbar:        false;
-    padding:          3px 0px 0px ;
+    padding:          7px 7px 7px ;
 }
 element-icon {
     size:             2.5em ;

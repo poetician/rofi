@@ -1,23 +1,23 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-0023 Montane ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-0023 Montane
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         rgba ( 180, 144, 73, 50 % );
+    blue:                        rgba ( 126, 177, 174, 50 % );
+    lightfg:                     rgba ( 171, 190, 189, 100 % );
+    lightbg:                     rgba ( 2, 2, 2, 10 % );
+    foreground:                  rgba ( 226, 226, 217, 100 % );
+    background:                  rgba ( 46, 42, 42, 60 % );
+    background-color:            rgba ( 46, 42, 42, 20 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
-    selected-normal-background:  @lightfg;
+    selected-normal-foreground:  @foreground;
+    selected-normal-background:  @red;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
@@ -29,7 +29,7 @@
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
+    alternate-normal-background: @blue;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -38,15 +38,20 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           10;
+    border-radius:    20;
+    padding:          30;
+    x-offset:         -80;
+    y-offset:         -40;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           10;
+    border-radius:    20;
+    padding:          10;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
     padding:          1px ;
 }
@@ -55,15 +60,32 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
     spacing:          2px ;
-    scrollbar:        true;
-    padding:          2px 0px 0px ;
+    scrollbar:        false;
+    padding:          3px 0px 0px ;
 }
 element {
     border:           0;
-    padding:          1px ;
+    border-radius:    20;
+    padding:          20px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.45;
+}
+element {
+    border:           20;
+    border-color:     @background;
+    border-radius:    20;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;

@@ -38,15 +38,15 @@
 }
 window {
     background-color: @background;
-    border:           6;
-    padding:          3;
+    border:           0;
+    padding:          15;
 }
 mainbox {
-    border:           6;
-    padding:          3;
+    border:           0;
+    padding:          0;
 }
 message {
-    border:           1px dash 3px 3px ;
+    border:           1px dash 0px 0px ;
     border-color:     @separatorcolor;
     padding:          1px ;
 }
@@ -55,21 +55,24 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           3px dash 0px 0px ;
+    border:           2px dash 0px 0px ;
     border-color:     @separatorcolor;
-    spacing:          3px ;
+    spacing:          2px ;
     scrollbar:        true;
-    padding:          3px 0px 0px ;
+    padding:          2px 0px 0px ;
 }
 element-icon {
-    size:             2em ;
+    size:             3em ;
 }
 element {
   orientation: horizontal;
 }
+element-text {
+      vertical-align: 0.50;
+}
 element {
-    border:           6;
-    padding:          3px ;
+    border:           0;
+    padding:          1px ;
 }
 element normal.normal {
     background-color: @normal-background;

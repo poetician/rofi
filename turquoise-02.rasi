@@ -1,19 +1,19 @@
 /**
- * Base16 oomox-0006 Piano Hall ROFI Color theme
+ * Base16 oomox-Turquoise ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0006 Piano Hall
+ *  Scheme: oomox-Turquoise
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         #073351;
+    blue:                        #2aa1b7;
+    lightfg:                     #87b0e6;
+    lightbg:                     #0e82b0;
+    foreground:                  #6ad6ef;
+    background:                  #094e62;
+    background-color:            #416289;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -38,32 +38,44 @@
 }
 window {
     background-color: @background;
-    border:           1;
-    padding:          5;
+    border:           10;
+    border-radius:    20;
+    padding:          10;
 }
 mainbox {
-    border:           0;
-    padding:          0;
+    border:           10;
+    border-radius:    20;
+    padding:          10;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           1px dash 3px 3px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          10px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    border:           3px dash 0px 0px ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          3px ;
     scrollbar:        true;
-    padding:          2px 0px 0px ;
+    padding:          6px 0px 0px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.50;
 }
 element {
     border:           0;
-    padding:          1px ;
+    border-radius:    20;
+    padding:          16px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -101,13 +113,6 @@ element alternate.active {
     background-color: @alternate-active-background;
     text-color:       @alternate-active-foreground;
 }
-scrollbar {
-    width:            4px ;
-    border:           0;
-    handle-color:     @normal-foreground;
-    handle-width:     8px ;
-    padding:          0;
-}
 sidebar {
     border:           2px dash 0px 0px ;
     border-color:     @separatorcolor;
@@ -119,6 +124,13 @@ button {
 button selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
+}
+scrollbar {
+    width:            0px ;
+    border:           0;
+    handle-color:     @normal-foreground;
+    handle-width:     0px ;
+    padding:          0;
 }
 inputbar {
     spacing:          0px;
