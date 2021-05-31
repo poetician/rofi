@@ -38,18 +38,20 @@
 }
 window {
     background-color: @background;
-    border:           10;
-    border-radius:    25;
-    padding:          10;
+    border:           0;
+    border-radius:    0;
+    padding:          0;
+    x-offset:         -60;
+    y-offset:         140;
 }
 mainbox {
-    border:           10;
-    border-radius:    25;
+    border:           0;
+    border-radius:    0;
     border-color:     @background;
-    padding:          10;
+    padding:          0;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 1px 0px ;
     border-color:     @separatorcolor;
     border-radius:    25;
     padding:          1px ;
@@ -59,12 +61,14 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2px dash 0px 0px ;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
     border-color:     @separatorcolor;
-    border-radius:    25;
-    spacing:          2px ;
+    spacing:          12px ;
     scrollbar:        false;
-    padding:          2px 0px 0px ;
+    padding:          5px 2px 0px ;
 }
 element-icon {
     size:             3em ;
@@ -76,9 +80,9 @@ element-text {
       vertical-align: 0.55;
 }
 element {
-    border:           20;
-    border-color:     @background;
-    border-radius:    25;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    border-color:     @separator;
     padding:          10px ;
 }
 element normal.normal {
@@ -138,9 +142,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

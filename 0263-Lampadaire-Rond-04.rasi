@@ -1,27 +1,28 @@
 /**
- * Base16 oomox-0268 Forest Plains Peaks ROFI Color theme
+ * Base16 oomox-0263 Lampadaire_Rond ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0268 Forest Plains Peaks
+ *  Scheme: oomox-0263 Lampadaire_Rond
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
+    yellow:                      #FEE58940;
     black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
-    separatorcolor:              @foreground;
-    border-color:                @foreground;
+    red:                         rgba ( 164, 130, 125, 80 % );
+    blue:                        rgba ( 72, 128, 154, 100 % );
+    lightfg:                     rgba ( 137, 155, 162, 50 % );
+    lightbg:                     rgba ( 54, 51, 51, 50 % );
+    foreground:                  rgba ( 222, 218, 220, 100 % );
+    background:                  rgba ( 29, 27, 28, 0 % );
+    background-color:            rgba ( 29, 27, 28, 0 % );
+    separatorcolor:              @yellow;
+    border-color:                @yellow;
     selected-normal-foreground:  @black;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @red;
+    selected-active-foreground:  @black;
     selected-active-background:  @blue;
-    selected-urgent-foreground:  @background;
+    selected-urgent-foreground:  @black;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
     normal-background:           @background;
@@ -39,38 +40,49 @@
 }
 window {
     background-color: @background;
-    border:           7;
-    border-radius:    36 36 1 1;
-    padding:          5;
+    border:           0 1 0 10;
+    border-radius:    20;
+    padding:          1 1 0 10;
     x-offset:         -40;
     y-offset:         -20;
 }
 mainbox {
-    border:           7;
-    border-radius:    24 24 1 1;
-    padding:          5;
+    border:           0 1 0 10;
+    border-radius:    20;
+    padding:          1px 1px 0px 10px;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           0 1 0 10;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          1px 1px 0px 10px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           5px dash 5px 5px ;
-    border-radius:    24 24 2 2;
+    border:           0 1 0 10;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          5px ;
+    spacing:          2px ;
     scrollbar:        false;
-    padding:          7px 5px 5px ;
+    padding:          1px 1px 0px 10px;
+}
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           5;
-    border-radius:    16 16 2 2;
-    padding:          5px ;
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.50;
+}
+element {
+    border:           0 1 0 10;
+    border-radius:    20;
+    border-radius:    25;
+    padding:          1px 1px 0 px 10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -129,13 +141,13 @@ button selected {
 }
 inputbar {
     padding:          5px;
-    border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
+    border-spacing:   2 1 0 10;
+    border:           2px 1px 0px 10px ;
     border-radius:    40%;
-    spacing:          20px;
+    spacing:          10px;
     margin:           5px 5px 5px;
-    border-color:     @foreground;
-    text-color:       @foreground;
+    border-color:     @yellow;
+    text-color:       @yellow;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

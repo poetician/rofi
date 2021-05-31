@@ -37,16 +37,15 @@
     spacing:                     2;
 }
 window {
-    anchor:           east;
     background-color: @background;
-    border:           10px dash 5px 1px ;
+    border:           5px dash 5px 1px ;
     border-radius:    10;
     padding:          10;
-    x-offset:         -60px;
-    y-offset:         -40px;
+    x-offset:         -40px;
+    y-offset:         80px;
 }
 mainbox {
-    border:           10px dash 5px 1px ;
+    border:           5px dash 5px 1px ;
     border-radius:    10;
     padding:          10;
 }
@@ -71,7 +70,7 @@ listview {
     padding:          5px 5px 5px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
   orientation: vertical;

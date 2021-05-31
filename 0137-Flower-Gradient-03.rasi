@@ -7,17 +7,18 @@
  */
 
 * {
+    yellow:                      #FCAD8F66;
     black:                       #000000;
     red:                         #C15FB4;
-    blue:                        #6F2C80;
+    blue:                        #6F2C8066;
     lightfg:                     #FFE9FE;
-    lightbg:                     #FCAD8F;
-    foreground:                  #3C5068;
+    lightbg:                     #FCAD8F66;
+    foreground:                  #3C5068b3;
     background:                  #98629Bb3;
     background-color:            #0000001a;
     separatorcolor:              @foreground;
     border-color:                @lightbg;
-    selected-normal-foreground:  @red;
+    selected-normal-foreground:  @lightfg;
     selected-normal-background:  @foreground;
     selected-active-foreground:  @background-color;
     selected-active-background:  @blue;
@@ -30,7 +31,7 @@
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @lightfg;
-    alternate-normal-background: @lightbg;
+    alternate-normal-background: @yellow;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -39,15 +40,15 @@
 }
 window {
     background-color: @background;
-    border:           0 0 30 0;
+    border:           0 0 20 0;
     border-radius:    20;
     border-color:     @blue;
     padding:          0 0 5 0;
     x-offset:         -40;
-    y-offset:         10;
+    y-offset:         -80;
 }
 mainbox {
-    border:           0 0 15 0;
+    border:           0 0 10 0;
     border-radius:    20;
     border-color:     @blue;
     padding:          0 0 5 0;
@@ -56,19 +57,19 @@ message {
     border:           10px 0px 10px 0px ;
     border-radius:    20;
     border-color:     @blue;
-    padding:          10px 0px 10px 0px;
+    padding:          10px 0px 5px 0px;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           10px 0px 10px 0px ;
+    border:           10px 0px 0px 0px ;
     border-radius:    20;
     border-color:     #00000000;
     spacing:          10px ;
     scrollbar:        false;
-    padding:          3px 0px 0px 0px;
+    padding:          5px 0px 0px 0px;
 }
 element-icon {
     size:             3em ;
@@ -80,10 +81,10 @@ element-text {
       vertical-align: 0.45;
 }
 element {
-    border:           20 0 20 0;
+    border:           10 0 10 0;
     border-color:     @blue;
     border-radius:    20;
-    padding:          10px ;
+    padding:          5px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -147,7 +148,7 @@ inputbar {
     border:           5px;
     spacing:          10px;
     margin:           5px 5px 5px;
-    border-color:     @foreground;
+    border-color:     @lightfg;
     text-color:       @lightfg;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
 case-indicator {

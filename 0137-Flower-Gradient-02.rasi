@@ -7,28 +7,30 @@
  */
 
 * {
-    red:                         rgba ( 110, 78, 145, 50 % );
-    blue:                        rgba ( 38, 50, 104, 50 % );
-    lightfg:                     rgba ( 255, 255, 255, 100 % );
-    lightbg:                     rgba ( 30, 18, 38, 40 % );
-    foreground:                  rgba ( 254, 230, 231, 50 % );
-    background:                  rgba ( 30, 30, 30, 20 % );
-    background-color:            rgba ( 30, 18, 38, 20 % );
+    yellow:                      #FBEB7F33;
+    black:                       #00000099;
+    red:                         #C15FB499;
+    blue:                        #6F2C8066;
+    lightfg:                     #FFE9FE;
+    lightbg:                     #FCAD8F99;
+    foreground:                  #3C506899;
+    background:                  #ffffff33;
+    background-color:            #FFE9FE33;
     separatorcolor:              @foreground;
-    border-color:                @foreground;
+    border-color:                @yellow;
     selected-normal-foreground:  @lightbg;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @lightfg;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @lightfg;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -40,20 +42,20 @@ window {
     background-color: @background;
     border:           30;
     border-radius:    20;
-    padding:          1;
+    padding:          0;
     x-offset:         -80;
     y-offset:         -10;
 }
 mainbox {
     border:           20;
     border-radius:    0;
-    padding:          1;
+    padding:          0;
 }
 message {
     border:           10px dash 0px 0px ;
     border-radius:    20;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          0px ;
 }
 textbox {
     text-color:       @foreground;
@@ -63,14 +65,14 @@ listview {
     border:           10px dash 0px 0px ;
     border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          5px ;
     scrollbar:        false;
     padding:          3px 0px 0px ;
 }
 element {
     border:           0;
     border-radius:    20;
-    padding:          20px ;
+    padding:          0px ;
 }
 element-icon {
     size:             3em ;
@@ -85,7 +87,7 @@ element {
     border:           20;
     border-color:     @background;
     border-radius:    20;
-    padding:          10px ;
+    padding:          0px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -143,29 +145,29 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    border-radius:    40%;
+    border-radius:    30%;
     padding:          5px;
-    border-spacing:   5px 0 0 0;
+    border-spacing:   2 2 2 2;
     border:           5px;
     spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @foreground;
-    text-color:       @normal-foreground;
+    margin:           5px 5px 5px 5px;
+    border-color:     @lightfg;
+    text-color:       @lightfg;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
     case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;}
+    text-color:       @lightfg;}
     case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 textbox-prompt-colon {
     expand:           false;

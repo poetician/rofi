@@ -37,21 +37,21 @@
     spacing:                     2;
 }
 window {
-    anchor:           east;
     background-color: @background;
-    border:           5;
-    border-radius:    5;
+    border:           10;
+    border-radius:    20;
     padding:          10;
-    x-offset:         -40px;
-    y-offset:         -40px;
+    padding-radius:   5;
+    x-offset:         -1280px;
+    y-offset:         140px;
 }
 mainbox {
-    border:           5;
-    border-radius:    5;
-    padding:          10;
+    border:           10;
+    border-radius:    20;
+    padding:          10px ;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 0px 0px ;
     border-radius:    20;
     border-color:     @separatorcolor;
     padding:          10px ;
@@ -69,13 +69,13 @@ listview {
     padding:          3px 0px 0px ;
 }
 element-icon {
-    size:             4em ;
+    size:             2.5em ;
 }
 element {
-  orientation: vertical;
+  orientation: horizontal;
 }
 element-text {
-      horizontal-align: 0.5;
+      vertical-align: 0.45;
 }
 element {
     border:           10;
@@ -138,9 +138,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           15px dash 5px 1px ;
+    border-radius:    40%;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

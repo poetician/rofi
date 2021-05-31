@@ -44,8 +44,8 @@ window {
     border:           10 0 0 0;
     border-radius:    20;
     padding:          10 0 0 0;
-    x-offset:         -100;
-    y-offset:         -60;
+    x-offset:         -40;
+    y-offset:         200;
 }
 mainbox {
     border:           10 0 0 0;

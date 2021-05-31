@@ -1,25 +1,24 @@
 /**
- * Base16 oomox-0268 Forest Plains Peaks ROFI Color theme
+ * Base16 oomox-0067 Peaks and Plain ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0268 Forest Plains Peaks
+ *  Scheme: oomox-0067 Peaks and Plain
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
+    red:                         rgba ( 240, 126, 49, 20 % );
+    blue:                        rgba ( 53, 65, 74, 60 % );
+    lightfg:                     rgba ( 230, 231, 228, 20 % );
+    lightbg:                     rgba ( 53, 65, 74, 100 % );
+    foreground:                  rgba ( 255, 255, 255, 70 % );
+    background:                  rgba ( 53, 65, 74, 10 % );
+    background-color:            rgba ( 241, 123, 41, 20 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @black;
+    selected-normal-foreground:  @lightbg;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @red;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
@@ -39,38 +38,48 @@
 }
 window {
     background-color: @background;
-    border:           7;
-    border-radius:    36 36 1 1;
-    padding:          5;
-    x-offset:         -40;
-    y-offset:         -20;
+    border:           2 20 5 1;
+    border-radius:    10 15 10 10;
+    padding:          5 15 5 10;
+    x-offset:         -60px;
+    y-offset:         -30px;
 }
 mainbox {
-    border:           7;
-    border-radius:    24 24 1 1;
-    padding:          5;
+    border:           2 10 5 1;
+    border-radius:    10 15 10 10;
+    padding:          5 15 5 10;
 }
 message {
     border:           1px dash 0px 0px ;
+    border-radius:    5 15 10 10;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    padding:          5 15 5 10 ;
 }
 textbox {
     text-color:       @foreground;
 }
-listview {
-    fixed-height:     0;
-    border:           5px dash 5px 5px ;
-    border-radius:    24 24 2 2;
-    border-color:     @separatorcolor;
-    spacing:          5px ;
-    scrollbar:        false;
-    padding:          7px 5px 5px ;
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           5;
-    border-radius:    16 16 2 2;
-    padding:          5px ;
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.50;
+}
+listview {
+    fixed-height:     0;
+    border:           2 10 5 1;
+    border-radius:    5 15 10 10;
+    border-color:     @separatorcolor;
+    spacing:          12px ;
+    scrollbar:        false;
+    padding:          5 15 5 10 ;
+}
+element {
+    border:           2 10 5 1;
+    border-radius:    5 15 10 10;
+    padding:          5 15 5 10 ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -109,7 +118,7 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
+    width:            0px ;
     border:           0;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
@@ -128,17 +137,16 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
-    border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
-    border-radius:    40%;
-    spacing:          20px;
+    border:           2 10 5 1;
+    border-radius:    10 15 10 10;
+    padding:          5 15 5 10 ;
+    border-spacing:   0 0 0 0;
+    spacing:          5px;
     margin:           5px 5px 5px;
     border-color:     @foreground;
-    text-color:       @foreground;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-case-indicator {
+    text-color:       @normal-foreground;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
 }

@@ -1,35 +1,35 @@
 /**
- * Base16 oomox-0268 Forest Plains Peaks ROFI Color theme
+ * Base16 oomox-0264 Misty Island Morning_Round Suru ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0268 Forest Plains Peaks
+ *  Scheme: oomox-0264 Misty Island Morning_Round Suru
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
+    yellow:                      #ffcc8d40;
+    red:                         rgba ( 236, 190, 113, 80 % );
+    blue:                        rgba ( 86, 103, 84, 50 % );
+    lightfg:                     rgba ( 192, 177, 168, 100 % );
+    lightbg:                     rgba ( 23, 39, 26, 70 % );
+    foreground:                  rgba ( 215, 215, 215, 10 % );
+    background:                  rgba ( 23, 39, 26,30 % );
+    background-color:            rgba ( 23, 39, 26, 30 % );
     separatorcolor:              @foreground;
-    border-color:                @foreground;
-    selected-normal-foreground:  @black;
+    border-color:                @yellow;
+    selected-normal-foreground:  @lightbg;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @red;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @lightfg;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @lightfg;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,38 +39,55 @@
 }
 window {
     background-color: @background;
-    border:           7;
-    border-radius:    36 36 1 1;
+    border:           15;
+    border-radius:    10;
     padding:          5;
-    x-offset:         -40;
-    y-offset:         -20;
+    x-offset:         -60px;
+    y-offset:         -20px;
 }
 mainbox {
-    border:           7;
-    border-radius:    24 24 1 1;
+    border:           15;
+    border-radius:    10;
     padding:          5;
 }
 message {
     border:           1px dash 0px 0px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
     padding:          5px ;
 }
 textbox {
     text-color:       @foreground;
+    border:           5px;
+    border-radius:    10px;
+    padding:          10px;
 }
 listview {
     fixed-height:     0;
-    border:           5px dash 5px 5px ;
-    border-radius:    24 24 2 2;
+    border:           15px dash 5px 5px ;
+    border-radius:    40;
     border-color:     @separatorcolor;
-    spacing:          5px ;
+    spacing:          25px ;
     scrollbar:        false;
-    padding:          7px 5px 5px ;
+    padding:          20px;
+    padding-radius:   36;
+}
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           5;
-    border-radius:    16 16 2 2;
-    padding:          5px ;
+  orientation:        horizontal;
+}
+element-text {
+      vertical-align: 0.5;
+}
+element {
+    border:           10;
+    border-radius:    10;
+    border-color:     @yellow;
+    spacing:          10px;
+    padding:          20px;
+    padding-radius:   36;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -128,14 +145,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
-    border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
+    padding:          15px;
+    border-spacing:   5;
+    border:           10px ;
     border-radius:    40%;
-    spacing:          20px;
-    margin:           5px 5px 5px;
+    spacing:          15px;
+    margin:           5px;
     border-color:     @foreground;
-    text-color:       @foreground;
+    text-color:       @yellow;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

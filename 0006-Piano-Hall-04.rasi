@@ -1,35 +1,37 @@
 /**
- * Base16 oomox-0268 Forest Plains Peaks ROFI Color theme
+ * Base16 oomox-0006 Piano Hall ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0268 Forest Plains Peaks
+ *  Scheme: oomox-0006 Piano Hall
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
+    white:                       #F2EFDE;
+    black:                       #030303;
+    grey:                        #83909d;
+    red:                         #99775899;
+    blue:                        #66729180;
+    lightfg:                     #8d9ba1;
+    lightbg:                     #c3c1c180;
+    foreground:                  #65695d;
+    background:                  #21242766;
+    background-color:            #9ea0b01a;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @black;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @red;
+    selected-active-foreground:  @black;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @white;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @white;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,19 +41,20 @@
 }
 window {
     background-color: @background;
-    border:           7;
-    border-radius:    36 36 1 1;
-    padding:          5;
-    x-offset:         -40;
-    y-offset:         -20;
+    border:           8;
+    border-radius:    10;
+    padding:          6;
+    x-offset:         40px;
+    y-offset:         -60px;
 }
 mainbox {
-    border:           7;
-    border-radius:    24 24 1 1;
+    border:           2;
+    border-radius:    5;
     padding:          5;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           3px dash 3px 3px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
     padding:          5px ;
 }
@@ -60,17 +63,27 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           5px dash 5px 5px ;
-    border-radius:    24 24 2 2;
+    border:           7px dash 7px 7px ;
+    border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          5px ;
+    spacing:          7px ;
     scrollbar:        false;
-    padding:          7px 5px 5px ;
+    padding:          7px 7px 7px ;
+}
+element-icon {
+    size:             2.5em ;
+}
+element {
+  orientation: vertical;
+}
+element-text {
+      horizontal-align: 0.5;
 }
 element {
     border:           5;
-    border-radius:    16 16 2 2;
-    padding:          5px ;
+    border-radius:    20;
+    border-color:     @red;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -128,27 +141,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
-    border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
-    border-radius:    40%;
-    spacing:          20px;
-    margin:           5px 5px 5px;
+    padding:          0 0 0 5;
+    border-spacing:   0;
+    border:           10px dash 5px 1px ;
+    border-radius:    20%;
+    spacing:          2px;
+    margin:           0;
     border-color:     @foreground;
-    text-color:       @foreground;
+    text-color:       @white;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @white;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @white;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @white;
 }
 textbox-prompt-colon {
     expand:           false;

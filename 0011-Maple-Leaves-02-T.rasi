@@ -1,35 +1,38 @@
 /**
- * Base16 oomox-0268 Forest Plains Peaks ROFI Color theme
+ * Base16 oomox-0011 Maple Leaves_1010 ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0268 Forest Plains Peaks
+ *  Scheme: oomox-0011 Maple Leaves_1010
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
-* {
-    black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
+ * {
+    white:                       #EFFDFD;
+    yellow:                      #FDCF8A99;
+    orange:                      #E1271399;
+    green:                       #627E2599;
+    red:                         #CC170366;
+    blue:                        #A1604766;
+    lightfg:                     #EAE6E766;
+    lightbg:                     #D9000066;
+    foreground:                  #FEB60F66;
+    background:                  #5514001a;
+    background-color:            #55140066;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @black;
+    selected-normal-foreground:  @white;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @red;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-foreground:           @yellow;
+    normal-background:           @blue;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @yellow;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,38 +42,52 @@
 }
 window {
     background-color: @background;
-    border:           7;
-    border-radius:    36 36 1 1;
-    padding:          5;
+    border:           0;
+    border-radius:    0;
+    padding:          0;
     x-offset:         -40;
-    y-offset:         -20;
+    y-offset:         180;
 }
 mainbox {
-    border:           7;
-    border-radius:    24 24 1 1;
-    padding:          5;
+    border:           0;
+    border-radius:    0;
+    border-color:     @background;
+    padding:          0;
 }
 message {
-    border:           1px dash 0px 0px ;
+    border:           10px dash 1px 0px ;
     border-color:     @separatorcolor;
-    padding:          5px ;
+    border-radius:    25;
+    padding:          1px ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           5px dash 5px 5px ;
-    border-radius:    24 24 2 2;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
     border-color:     @separatorcolor;
-    spacing:          5px ;
+    spacing:          12px ;
     scrollbar:        false;
-    padding:          7px 5px 5px ;
+    padding:          5px 2px 0px ;
+}
+element-icon {
+    size:             3em ;
 }
 element {
-    border:           5;
-    border-radius:    16 16 2 2;
-    padding:          5px ;
+  orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.55;
+}
+element {
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    border-color:     @separator;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -109,8 +126,9 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            4px ;
+    width:            0px ;
     border:           0;
+    border-radius:    15;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
@@ -129,13 +147,13 @@ button selected {
 }
 inputbar {
     padding:          5px;
-    border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
-    border-radius:    40%;
-    spacing:          20px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    spacing:          10px;
     margin:           5px 5px 5px;
     border-color:     @foreground;
-    text-color:       @foreground;
+    text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

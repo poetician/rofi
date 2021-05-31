@@ -41,8 +41,8 @@ window {
     border:           10;
     border-radius:    25;
     padding:          10;
-    x-offset:         -80;
-    y-offset:         -30;
+    x-offset:         80;
+    y-offset:         0;
 }
 mainbox {
     border:           10;
@@ -61,9 +61,11 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           10px dash 1px 0px ;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
     border-color:     @separatorcolor;
-    border-radius:    25;
     spacing:          12px ;
     scrollbar:        false;
     padding:          5px 2px 0px ;
@@ -78,9 +80,9 @@ element-text {
       vertical-align: 0.55;
 }
 element {
-    border:           20;
-    border-color:     @background;
-    border-radius:    25;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    border-color:     @separator;
     padding:          10px ;
 }
 element normal.normal {
@@ -140,9 +142,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5px;
+    border-spacing:   4 4 4 4;
+    border:           10px dash 5px 1px ;
+    border-radius:    15 15 5 5 ;
+    spacing:          10px;
+    margin:           5px 5px 5px;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

@@ -8,13 +8,13 @@
 
 * {
     black:                       #000000;
-    red:                         rgba ( 220, 107, 37, 90 % );
-    blue:                        rgba ( 61, 148, 194, 90 % );
-    lightfg:                     rgba ( 143, 147, 145, 100 % );
-    lightbg:                     rgba ( 31, 38, 41, 20 % );
-    foreground:                  rgba ( 136, 168, 184, 100 % );
-    background:                  rgba ( 31, 38, 41, 60 % );
-    background-color:            rgba ( 31, 38, 41, 30 % );
+    red:                         #D0571B80;
+    blue:                        #5E94AE80;
+    lightfg:                     #EF8B4D40;
+    lightbg:                     #7CA2B580;
+    foreground:                  #182110;
+    background:                  #A6451C80;
+    background-color:            #3B303E1a;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @black;
@@ -66,6 +66,15 @@ listview {
     spacing:          5px ;
     scrollbar:        false;
     padding:          7px 5px 5px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+    orientation: horizontal;
+}
+element-text {
+      vertical-align: 0.45;
 }
 element {
     border:           5;
@@ -128,27 +137,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
+    padding:          7px;
     border-spacing:   5 5 5 5;
-    border:           1px 1px 0px 10px ;
-    border-radius:    40%;
+    border:           5px 5px 5px 5px ;
+    border-radius:    16 16 2 2;
     spacing:          20px;
     margin:           5px 5px 5px;
-    border-color:     @foreground;
-    text-color:       @foreground;
+    border-color:     @black;
+    text-color:       @black;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 textbox-prompt-colon {
     expand:           false;

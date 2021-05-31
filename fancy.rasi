@@ -99,9 +99,9 @@ message {
     text-color:       black;
     background-color: lightgrey / 50%;
     border-color:     grey;
-    border:           2px;
+    border:           5px;
     border-radius:    5px;
-    padding:          4px;
+    padding:          5px;
     margin:           0px 0px 0.5em;
     expand:           false;
 }
@@ -110,10 +110,10 @@ listview {
     spacing:      2px ;
     scrollbar:    false;
     padding:      0.5em;
-    background-color: black/50%;
+    background-color: black / 50%;
 
     expand:       true;
-    border:       0px 2px 2px ;
+    border:       5px 2px 2px ;
     border-color: @separatorcolor;
     border-radius: 0px 0px 10px 10px;
 }
@@ -216,4 +216,3 @@ error-message {
     padding: 0.5em;
 
 }
-

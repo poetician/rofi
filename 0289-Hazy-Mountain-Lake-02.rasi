@@ -7,28 +7,31 @@
  */
 
 * {
-    red:                         rgba ( 205, 146, 101, 60 % );
-    blue:                        rgba ( 229, 193, 168, 60 % );
-    lightfg:                     rgba ( 255, 236, 214, 100 % );
-    lightbg:                     rgba ( 56, 32, 26, 30 % );
-    foreground:                  rgba ( 255, 236, 214, 100 % );
-    background:                  rgba ( 17, 0, 0, 10 % );
-    background-color:            rgba ( 17, 0, 0, 50 % );
+    black:                       #3B303E99;
+    yellow:                      #FED09C;
+    brown:                       #3B303E1a;
+    red:                         #A6451C;
+    blue:                        #00000000;
+    lightfg:                     #7CA2B533;
+    lightbg:                     #FED09C40;
+    foreground:                  #547245;
+    background:                  #FABB8833;
+    background-color:            #FABB8833;
     separatorcolor:              @foreground;
-    border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    border-color:                @brown;
+    selected-normal-foreground:  @black;
     selected-normal-background:  @lightfg;
-    selected-active-foreground:  @background;
+    selected-active-foreground:  @black;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @black;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @black;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -39,16 +42,13 @@
 window {
     anchor:           east;
     background-color: @background;
-    border:           15;
-    border-radius:    10;
-    padding:          5;
     x-offset:         -40px;
     y-offset:         -40px;
 }
 mainbox {
-    border:           15;
-    border-radius:    10;
-    padding:          5;
+    border:           0;
+    border-radius:    10 10 0 0;
+    padding:          0;
 }
 message {
     border:           1px dash 0px 0px ;
@@ -61,12 +61,12 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           3px dash 0px 0px ;
+    border:           0px dash 0px 0px ;
     border-radius:    10;
     border-color:     @separatorcolor;
-    spacing:          3px ;
+    spacing:          5px ;
     scrollbar:        false;
-    padding:          3px 0px 0px ;
+    padding:          0px 0px 0px ;
 }
 element-icon {
     size:             3em ;
@@ -79,7 +79,7 @@ element-text {
 }
 element {
     border:           15;
-    border-radius:    10;
+    border-radius:    30 30 0 0;
     padding:          5px ;
 }
 element normal.normal {
@@ -138,22 +138,26 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
+    border-spacing:   5 5 5 5;
+    border:           15 3 9 3;
+    border-radius:    10 10 0 0;
+    padding:          2;
+    margin:           5px 5px 5px;
+    border-color:     @black;
+    text-color:       @yellow;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @yellow;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @yellow;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @yellow;
 }
 textbox-prompt-colon {
     expand:           false;

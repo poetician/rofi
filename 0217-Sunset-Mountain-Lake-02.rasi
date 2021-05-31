@@ -43,8 +43,8 @@ window {
     border:           4 8 16 8;
     border-radius:    20;
     padding:          8;
-    x-offset:         -40;
-    y-offset:         160;
+    x-offset:         -30;
+    y-offset:         150;
 }
 mainbox {
     border:           4 8 16 8;
