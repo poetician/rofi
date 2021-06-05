@@ -1,0 +1,167 @@
+/**
+ * Base16 oomox-0258 Wheat Sunset ROFI Color theme
+ *
+ * Authors
+ *  Scheme: oomox-0258 Wheat Sunset
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    black:                       #00000000;
+    red:                         #dd00d233;
+    blue:                        #bf00e733;
+    lightfg:                     #ff52381a;
+    lightbg:                     #ed970100;
+    foreground:                  #4113681a;
+    background:                  #0000001a;
+    background-color:            #9720fb1a;
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @black;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @red;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+    spacing:                     2;
+}
+window {
+    background-color: @background;
+    border:           5 dash 2px 10 ;
+    border-radius:    30 10 10 0;
+    padding:          10;
+    x-offset:         80;
+    y-offset:         280;
+}
+mainbox {
+    border:           7;
+    border-radius:    24 24 1 1;
+    padding:          10;
+}
+message {
+    border:           1px dash 0px 0px ;
+    border-color:     @separatorcolor;
+    padding:          10px ;
+}
+textbox {
+    text-color:       @foreground;
+}
+listview {
+    fixed-height:     0;
+    border:           5px dash 5px 5px ;
+    border-radius:    24 24 2 2;
+    border-color:     @separatorcolor;
+    spacing:          10px ;
+    scrollbar:        false;
+    padding:          7px 5px 5px ;
+}
+element-icon {
+    size:             3em ;
+}
+element {
+    orientation: vertical;
+}
+element-text {
+      horizontal-align: 0.5;
+}
+element {
+    border:           1 20 1 20;
+    border-radius:    16 16 2 2;
+    padding:          10px ;
+}
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:            4px ;
+    border:           0;
+    handle-color:     @normal-foreground;
+    handle-width:     8px ;
+    padding:          0;
+}
+sidebar {
+    border:           2px dash 0px 0px ;
+    border-color:     @separatorcolor;
+}
+button {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    padding:          10px;
+    border-spacing:   5 5 5 5;
+    border:           5px 5px 5px 5px ;
+    border-radius:    16 16 2 2;
+    spacing:          20px;
+    margin:           5px 5px 5px;
+    border-color:     @black;
+    text-color:       @black;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+case-indicator {
+    spacing:          0;
+    text-color:       @black;
+}
+entry {
+    spacing:          0;
+    text-color:       @black;
+}
+prompt {
+    spacing:          0;
+    text-color:       @black;
+}
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0px 0.3000em 0.0000em 0.0000em ;
+    text-color:       inherit;
+}
