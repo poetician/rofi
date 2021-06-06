@@ -40,19 +40,19 @@
 window {
     background-color: @black;
     border:           4px dash 20px 20px ;
-    border-radius:    5;
-    padding:          14;
+    border-radius:    30 30 10 10 ;
+    padding:          2;
     x-offset:         80;
     y-offset:         -20;
 }
 mainbox {
     border:           4px dash 20px 20px ;
-    border-radius:    30;
-    padding:          14;
+    border-radius:    30 30 10 10 ;
+    padding:          2;
 }
 message {
     border:           4px dash 20px 20px ;
-    border-radius:    60;
+    border-radius:    30 30 10 10 ;
     border-color:     @separatorcolor;
     padding:          14px ;
 }
@@ -62,11 +62,11 @@ textbox {
 listview {
     fixed-height:     0;
     border:           4px dash 20px 20px ;
-    border-radius:    60;
+    border-radius:    30 30 10 10 ;
     border-color:     @separatorcolor;
     spacing:          20px ;
     scrollbar:        false;
-    padding:          0px 0px 0px ;
+    padding:          2px 2px 2px ;
 }
 element-icon {
     size:             2em ;
@@ -75,9 +75,9 @@ element {
   orientation: horizontal;
 }
 element {
-    border:           4px dash 20px 20px ;
-    border-radius:    60;
-    padding:          8px ;
+    border:           5px dash 15px 20px ;
+    border-radius:    25 25 10 10 ;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -137,29 +137,29 @@ button selected {
 }
 inputbar {
     padding:          5px;
-    border-spacing:   0 0 0 0;
-    border:           4px dash 20px 20px ;
-    border-radius:    40%;
+    border-spacing:   5 ;
+    border:           2px dash 10px 10px ;
+    border-radius:    20 20 10 10 ;
     spacing:          10px;
-    margin:           5px 5px 5px;
+    margin:           15px;
     border-color:     @foreground;
-    text-color:       @normal-foreground;
+    text-color:       @lightbg;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightbg;
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightbg;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightbg;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightbg;
 }
 textbox-prompt-colon {
     expand:           false;
