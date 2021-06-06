@@ -7,7 +7,8 @@
  */
 
 * {
-    black:                       #00000000;
+    white:                       #FEFCFF;
+    black:                       #00000080;
     red:                         #dd00d233;
     blue:                        #bf00e733;
     lightfg:                     #ff52381a;
@@ -23,13 +24,13 @@
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
+    normal-foreground:           @white;
     normal-background:           @background;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
-    alternate-normal-foreground: @foreground;
+    alternate-normal-foreground: @white;
     alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
@@ -42,8 +43,8 @@ window {
     border:           5 dash 2px 10 ;
     border-radius:    30 10 10 0;
     padding:          10;
-    x-offset:         80;
-    y-offset:         280;
+    x-offset:         -360;
+    y-offset:         -60;
 }
 mainbox {
     border:           7;
