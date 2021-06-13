@@ -7,16 +7,17 @@
  */
 
 * {
-    red:                         rgba ( 240, 126, 49, 20 % );
-    blue:                        rgba ( 53, 65, 74, 60 % );
-    lightfg:                     rgba ( 230, 231, 228, 20 % );
-    lightbg:                     rgba ( 53, 65, 74, 100 % );
-    foreground:                  rgba ( 255, 255, 255, 70 % );
-    background:                  rgba ( 53, 65, 74, 10 % );
-    background-color:            rgba ( 241, 123, 41, 20 % );
+    seltext:                     #F6DABE;
+    red:                         #F07E2833;
+    blue:                        #35414A99;
+    lightfg:                     #E6E7E433;
+    lightbg:                     #35414A;
+    foreground:                  #ffffffb3;
+    background:                  #35414A1a;
+    background-color:            #F17B2933;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @seltext;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -38,19 +39,19 @@
 }
 window {
     background-color: @background;
-    border:           1 10 10 1;
+    border:           1 10 10 3;
     border-radius:    10 20 30 10;
     padding:          2 25 5 2;
-    x-offset:         -100px;
-    y-offset:         -10px;
+    x-offset:         -300px;
+    y-offset:         120px;
 }
 mainbox {
-    border:           1 10 10 1;
+    border:           1 10 10 3;
     border-radius:    10 20 30 10;
     padding:          2 25 5 2;
 }
 message {
-    border:           1 10 10 1;
+    border:           1 10 10 3;
     border-radius:    10 20 30 10;
     border-color:     @separatorcolor;
     padding:          5 15 5 1 ;
@@ -69,7 +70,7 @@ element-text {
 }
 listview {
     fixed-height:     0;
-    border:           1 10 10 1;
+    border:           1 10 10 3;
     border-radius:    10 20 30 10;
     border-color:     @separatorcolor;
     spacing:          12px ;
@@ -77,7 +78,7 @@ listview {
     padding:          2 25 5 2;
 }
 element {
-    border:           1 10 10 1;
+    border:           1 10 10 3;
     border-radius:    10 20 20 10;
     padding:          2 25 5 2;
 }
@@ -137,7 +138,7 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    border:           1 10 10 1;
+    border:           3 5 5 3;
     border-radius:    10 20 30 10;
     padding:          2 25 5 2;
     border-spacing:   5px 0 0 0;

@@ -43,19 +43,19 @@
 }
 window {
     background-color: @background;
-    border:           4 8 14 7 ;
-    border-radius:    6 6 12 12 ;
+    border:           3 9 12 6 ;
+    border-radius:    10 20 10 10;
     padding:          3 12 9 6 ;
     x-offset:         30px;
-    y-offset:         50px;
+    y-offset:         -180px;
 }
 mainbox {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
+    border:           3 9 12 6 ;
+    border-radius:    10 20 15 10;
     padding:          3 12 9 6 ;
 }
 message {
-    border:           4 8 14 7 ;
+    border:           3 9 12 6 ;
     border-radius:    10 20 20 10;
     border-color:     @orange;
     padding:          2 20 5 2 ;
@@ -64,7 +64,7 @@ textbox {
     text-color:       @foreground;
 }
 element-icon {
-    size:             2em ;
+    size:             3em ;
 }
 element {
   orientation: horizontal;
@@ -74,16 +74,16 @@ element-text {
 }
 listview {
     fixed-height:     0;
-    border:           4 8 14 7 ;
-    border-radius:    12 12 24 24 ;
+    border:           3 9 12 6 ;
+    border-radius:    10 20 20 10;
     border-color:     @orange;
     spacing:          12px ;
     scrollbar:        false;
     padding:          3 12 9 6 ;
 }
 element {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
+    border:           3 9 12 6 ;
+    border-radius:    10 20 20 10;
     padding:          2 25 5 2;
 }
 element normal.normal {
@@ -124,13 +124,13 @@ element alternate.active {
 }
 scrollbar {
     width:            0px ;
-    border:           4 8 14 7 ;
+    border:           3 9 12 6 ;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
 }
 sidebar {
-    border:           4 8 14 7 ;
+    border:           3 9 12 6 ;
     border-color:     @separatorcolor;
 }
 button {
@@ -143,7 +143,7 @@ button selected {
 }
 inputbar {
     background-color: @clear;
-    border:           4 8 14 7 ;
+    border:           3 9 12 6 ;
     border-radius:    10 20 30 10;
     padding:          2 25 5 2;
     border-spacing:   5px 0 0 0;

@@ -152,10 +152,7 @@ inputbar {
     margin:           5px 5px 5px;
     border-color:     @foreground;
     text-color:       @black;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
-case-indicator {
-    spacing:          0;
-    text-color:       @black;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;

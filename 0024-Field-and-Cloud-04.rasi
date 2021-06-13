@@ -1,29 +1,25 @@
 /**
- * Base16 oomox-0067 Peaks and Plain ROFI Color theme
+ * Base16 oomox-0024 Montane ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0067 Peaks and Plain
+ *  Scheme: oomox-0024 Montane
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    clear:                       #00000000;
-    orange:                      #AE3B204d;
-    orange2:                     #AE3B20;
-    black:                       #00000080;
-    green:                       #373F101a;
-    red:                         #CD162333;
-    blue:                        #9AA2D066;
-    lightfg:                     #D7D6D280;
-    lightbg:                     #CFC3B740;
-    foreground:                  #2F2F17b3;
-    background:                  #CEA9974d;
-    background-color:            #F7D9BD66;
-    separatorcolor:              @lightfg;
-    border-color:                @orange;
-    selected-normal-foreground:  @foreground;
-    selected-normal-background:  @green;
-    selected-active-foreground:  @orange2;
+    black:                       #00000000;
+    red:                         rgba ( 54, 74, 88, 70 % );
+    blue:                        rgba ( 173, 203, 198, 80 % );
+    lightfg:                     rgba ( 186, 209, 203, 90 % );
+    lightbg:                     rgba ( 17, 17, 17, 30 % );
+    foreground:                  rgba ( 195, 202, 58, 90 % );
+    background:                  rgba ( 0, 18, 0, 30 % );
+    background-color:            rgba ( 0, 18, 0, 30 % );
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @red;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
@@ -34,7 +30,7 @@
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @blue;
+    alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -43,48 +39,57 @@
 }
 window {
     background-color: @background;
-    border:           4 8 14 7 ;
-    border-radius:    6 6 12 12 ;
-    padding:          3 12 9 6 ;
-    x-offset:         30px;
-    y-offset:         50px;
+    border:           15 1 10 1;
+    border-radius:    25;
+    padding:          5 1 5 1;
+    x-offset:         60;
+    y-offset:         -160;
 }
 mainbox {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          3 12 9 6 ;
+    border:           15 1 10 1;
+    padding:          0 1 5 1;
+    border-radius:    25;
 }
 message {
-    border:           4 8 14 7 ;
-    border-radius:    10 20 20 10;
-    border-color:     @orange;
-    padding:          2 20 5 2 ;
+    border:           5px dash 1px 10px ;
+    border-radius:    25;
+    border-color:     @separatorcolor;
+    padding:          5px 1px 5px 1px ;
 }
 textbox {
     text-color:       @foreground;
-}
-element-icon {
-    size:             2em ;
-}
-element {
-  orientation: horizontal;
-}
-element-text {
-      vertical-align: 0.50;
+    border:           15 1 10 1;
+    padding:          5 1 5 1;
+    border-radius:    25;
 }
 listview {
     fixed-height:     0;
-    border:           4 8 14 7 ;
-    border-radius:    12 12 24 24 ;
-    border-color:     @orange;
-    spacing:          12px ;
+    border:           5px dash 1px 10px ;
+    border-radius:    25;
+    border-color:     @separatorcolor;
+    spacing:          10px ;
     scrollbar:        false;
-    padding:          3 12 9 6 ;
+    padding:          5px 5px 5px 5px ;
 }
 element {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          2 25 5 2;
+    border:           5 1 5 1;
+    border-radius:    25;
+    padding:          5 1 5 1;
+}
+element-icon {
+    size:             2.5em ;
+}
+element {
+    orientation:      horizontal;
+}
+element-text {
+    vertical-align:   0.5;
+}
+element {
+    border:           5 0 5 1;
+    border-color:     @foreground;
+    border-radius:    20;
+    padding:          1 5 1 20;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -123,14 +128,14 @@ element alternate.active {
     text-color:       @alternate-active-foreground;
 }
 scrollbar {
-    width:            0px ;
-    border:           4 8 14 7 ;
+    width:            4px ;
+    border:           5 1 5 1;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
-    padding:          0;
+    padding:          5 1 5 1;
 }
 sidebar {
-    border:           4 8 14 7 ;
+    border:           2px dash 0px 0px ;
     border-color:     @separatorcolor;
 }
 button {
@@ -142,36 +147,30 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    background-color: @clear;
-    border:           4 8 14 7 ;
-    border-radius:    10 20 30 10;
-    padding:          2 25 5 2;
-    border-spacing:   5px 0 0 0;
+    padding:          5 1 5 15;
+    border:           5 1 5 1;
+    border-radius:    30%;
     spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @orange;
-    text-color:       @normal-foreground;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-    case-indicator {
+    margin:           5px 5px 5px 5px ;
+    background-color: @background;
+    border-color:     @foreground;
+    text-color:       @foreground;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 entry {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 prompt {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 textbox-prompt-colon {
     expand:           false;
     str:              ":";
-    background-color: @clear;
     margin:           0px 0.3000em 0.0000em 0.0000em ;
     text-color:       inherit;
 }

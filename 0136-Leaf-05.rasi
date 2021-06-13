@@ -44,8 +44,8 @@ window {
     border:           0 10 0 10 ;
     border-radius:    0 0 0 0 ;
     padding:          0 5 0 5 ;
-    x-offset:         0px;
-    y-offset:         -80px;
+    x-offset:         70px;
+    y-offset:         280px;
 }
 mainbox {
     border-color:     @foreground;

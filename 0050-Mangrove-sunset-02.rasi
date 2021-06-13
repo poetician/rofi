@@ -1,29 +1,28 @@
 /**
- * Base16 oomox-0067 Peaks and Plain ROFI Color theme
+ * Base16 oomox-0050 Round Suru ROFI Color theme
  *
  * Authors
- *  Scheme: oomox-0067 Peaks and Plain
+ *  Scheme: oomox-0050 Round Suru
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    clear:                       #00000000;
-    orange:                      #AE3B204d;
-    orange2:                     #AE3B20;
-    black:                       #00000080;
-    green:                       #373F101a;
-    red:                         #CD162333;
-    blue:                        #9AA2D066;
-    lightfg:                     #D7D6D280;
-    lightbg:                     #CFC3B740;
-    foreground:                  #2F2F17b3;
-    background:                  #CEA9974d;
-    background-color:            #F7D9BD66;
-    separatorcolor:              @lightfg;
-    border-color:                @orange;
-    selected-normal-foreground:  @foreground;
-    selected-normal-background:  @green;
-    selected-active-foreground:  @orange2;
+    white:                       #FFEC98;
+    olive:                       #489D1B;
+    grey:                        #85A7B1;
+    green:                       #48A07A4d;
+    red:                         #D69C8733;
+    blue:                        #9CA9D099;
+    lightfg:                     #A19894;
+    lightbg:                     #20252D99;
+    foreground:                  #A2A9BA;
+    background:                  #20252D4d;
+    background-color:            #20252D00;
+    separatorcolor:              @foreground;
+    border-color:                @green;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @red;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
@@ -34,7 +33,7 @@
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @blue;
+    alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -43,48 +42,47 @@
 }
 window {
     background-color: @background;
-    border:           4 8 14 7 ;
-    border-radius:    6 6 12 12 ;
-    padding:          3 12 9 6 ;
-    x-offset:         30px;
-    y-offset:         50px;
+    border:           0px;
+    border-radius:    15;
+    padding:          0;
+    x-offset:         0;
+    y-offset:         120;
 }
 mainbox {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          3 12 9 6 ;
+    border:           0px;
+    border-radius:    10;
+    padding:          0;
 }
 message {
-    border:           4 8 14 7 ;
-    border-radius:    10 20 20 10;
-    border-color:     @orange;
-    padding:          2 20 5 2 ;
+    border:           10px dash 0px 10px;
+    border-color:     @separatorcolor;
+    padding:          6px ;
 }
 textbox {
     text-color:       @foreground;
 }
+listview {
+    fixed-height:     0;
+    border:           0px;
+    border-radius:    10px 10px 10px 10px;
+    border-color:     @green;
+    spacing:          8px ;
+    scrollbar:        false;
+    padding:          4px 0px 0px ;
+}
 element-icon {
-    size:             2em ;
+    size:             3em ;
 }
 element {
   orientation: horizontal;
 }
 element-text {
-      vertical-align: 0.50;
-}
-listview {
-    fixed-height:     0;
-    border:           4 8 14 7 ;
-    border-radius:    12 12 24 24 ;
-    border-color:     @orange;
-    spacing:          12px ;
-    scrollbar:        false;
-    padding:          3 12 9 6 ;
+      vertical-align: 0.55;
 }
 element {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          2 25 5 2;
+    border:           0px;
+    border-radius:    10;
+    padding:          10px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -124,13 +122,13 @@ element alternate.active {
 }
 scrollbar {
     width:            0px ;
-    border:           4 8 14 7 ;
+    border:           0;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
 }
 sidebar {
-    border:           4 8 14 7 ;
+    border:           2px dash 0px 0px ;
     border-color:     @separatorcolor;
 }
 button {
@@ -142,36 +140,32 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    background-color: @clear;
-    border:           4 8 14 7 ;
-    border-radius:    10 20 30 10;
-    padding:          2 25 5 2;
-    border-spacing:   5px 0 0 0;
-    spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @orange;
-    text-color:       @normal-foreground;
+    padding:          4px dash 4px 4px;
+    border-spacing:   4;
+    border:           0px dash 2px 9px ;
+    border-radius:    0 0 12 12 ;
+    spacing:          8px;
+    margin:           6px;
+    background-color: @black;
+    border-color:     @white;
+    text-color:       @white;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
-    case-indicator {
+case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
-    background-color: @clear;
+    text-color:       @white;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
-    background-color: @clear;
+    text-color:       @white;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
-    background-color: @clear;
+    text-color:       @white;
 }
 textbox-prompt-colon {
     expand:           false;
     str:              ":";
-    background-color: @clear;
     margin:           0px 0.3000em 0.0000em 0.0000em ;
     text-color:       inherit;
 }

@@ -19,7 +19,7 @@
     background-color:            #F7D9BD;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @orange;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -44,8 +44,8 @@ window {
     border:           1 10 10 1;
     border-radius:    10 20 30 10;
     padding:          2 25 5 2;
-    x-offset:         -100px;
-    y-offset:         -10px;
+    x-offset:         40px;
+    y-offset:         50px;
 }
 mainbox {
     border:           1 10 10 1;

@@ -7,13 +7,13 @@
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         #B07959;
+    blue:                        #8D9BA190;
+    lightfg:                     #909293;
+    lightbg:                     #21242780;
+    foreground:                  #9EA0B0;
+    background:                  #21242733;
+    background-color:            #21242733;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -38,20 +38,20 @@
 }
 window {
     background-color: @background;
-    border:           5;
-    border-radius:    10;
-    padding:          5;
-    x-offset:         40px;
-    y-offset:         -60px;
+    border:           4 dash 8px 6 ;
+    border-radius:    16;
+    padding:          4;
+    x-offset:         0px;
+    y-offset:         60px;
 }
 mainbox {
-    border:           1;
-    border-radius:    5;
-    padding:          5;
+    border:           2;
+    border-radius:    8;
+    padding:          8;
 }
 message {
-    border:           3px dash 3px 3px ;
-    border-radius:    20;
+    border:           4px dash 6px 8px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
     padding:          5px ;
 }
@@ -60,8 +60,8 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           7px dash 7px 7px ;
-    border-radius:    20;
+    border:           8px dash 4px 6px ;
+    border-radius:    10;
     border-color:     @separatorcolor;
     spacing:          7px ;
     scrollbar:        false;
@@ -138,12 +138,12 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
+    padding:          4px dash 4px 4px ;
     border-spacing:   4 4 4 4;
-    border:           15px dash 5px 1px ;
+    border:           8px dash 4px 2px ;
     border-radius:    40%;
-    spacing:          10px;
-    margin:           5px 5px 5px;
+    spacing:          4px ;
+    margin:           0px dash 48px 4px;
     border-color:     @foreground;
     text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];

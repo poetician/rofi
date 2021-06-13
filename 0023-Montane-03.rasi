@@ -7,6 +7,7 @@
  */
 
 * {
+    orange:                      #FBAC0580;
     yellow:                      #F9C45B99;
     lightblue:                   #94C1AA;
     red:                         #B4904980;
@@ -14,10 +15,10 @@
     lightfg:                     #ABBEBD;
     lightbg:                     #0202021a;
     foreground:                  #E2E2D9;
-    background:                  #2E2E2A99;
+    background:                  #2E2E2A33;
     background-color:            #2E2E2A33;
     separatorcolor:              @foreground;
-    border-color:                @foreground;
+    border-color:                @orange;
     selected-normal-foreground:  @foreground;
     selected-normal-background:  @red;
     selected-active-foreground:  @background;
@@ -40,21 +41,21 @@
 }
 window {
     background-color: @background;
-    border:           10;
-    border-radius:    20;
-    padding:          30;
-    x-offset:         -80;
-    y-offset:         -40;
+    border:           8;
+    border-radius:    16;
+    padding:          40;
+    x-offset:         0;
+    y-offset:         60;
 }
 mainbox {
-    border:           10;
+    border:           8;
     border-radius:    20;
     padding:          10;
 }
 message {
     border:           10px dash 0px 0px ;
     border-radius:    20;
-    border-color:     @separatorcolor;
+    border-color:     @orange;
     padding:          1px ;
 }
 textbox {
@@ -62,20 +63,15 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           10px dash 0px 0px ;
+    border:           0px dash 0px 10px ;
     border-radius:    20;
-    border-color:     @separatorcolor;
-    spacing:          2px ;
+    border-color:     @orange;
+    spacing:          12px ;
     scrollbar:        false;
-    padding:          3px 0px 0px ;
-}
-element {
-    border:           0;
-    border-radius:    20;
-    padding:          20px ;
+    padding:          8px 4px 8px 4px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
   orientation: horizontal;
@@ -84,9 +80,10 @@ element-text {
       vertical-align: 0.45;
 }
 element {
-    border:           20;
-    border-color:     @background;
+    border:           0 0 10 0;
+    border-color:     @foreground;
     border-radius:    20;
+
     padding:          10px ;
 }
 element normal.normal {

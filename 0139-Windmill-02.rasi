@@ -43,9 +43,9 @@ window {
     background-color: @background;
     border:           10 0 0 0;
     border-radius:    20;
-    padding:          10 0 0 0;
-    x-offset:         -40;
-    y-offset:         200;
+    padding:          8 0 0 0;
+    x-offset:         60;
+    y-offset:         260;
 }
 mainbox {
     border:           10 0 0 0;
@@ -55,7 +55,7 @@ mainbox {
 message {
     border:           10px dash 0px 0px ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          8px ;
 }
 textbox {
     text-color:       @foreground;
@@ -65,12 +65,12 @@ listview {
     border:           6px 0px 0px 0px ;
     border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          4px ;
     scrollbar:        false;
-    padding:          4px 0px 0px 0px;
+    padding:          8px 0px 0px 0px;
 }
 element-icon {
-    size:             3em ;
+    size:             2.2em ;
 }
 element-text{
     horizontal-align: 0.50;
@@ -81,7 +81,7 @@ element {
 element {
     border:           10 0 0 0;
     border-radius:    20;
-    padding:          5px ;
+    padding:          8px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -139,15 +139,16 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    border-radius:    40%;
-    padding:          1px;
-    border-spacing:   5px 0 0 0;
-    border:           5px;
-    spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @foreground;
-    text-color:       @normal-foreground;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    border-radius:    30% ;
+    padding:          8px ;
+    border-spacing:   8px ;
+    border:           4px ;
+    spacing:          8px ;
+    margin:           8px ;
+    border-color:     @foreground ;
+    text-color:       @normal-foreground ;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
     case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;

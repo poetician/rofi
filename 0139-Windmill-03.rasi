@@ -7,30 +7,31 @@
  */
 
 * {
-    orange:                      #864E4F;
-    red:                         #BF695F1a;
-    blue:                        #917C5166;
-    lightfg:                     #6476731a;
-    lightbg:                     #333638cc;
-    foreground:                  #FEE6D0cc;
-    background:                  #864E4F66;
-    background-color:            #00000000;
+    fuchsia:                     #F0309Fb3;
+    orange:                      #F66D3F;
+    red:                         #C72473;
+    blue:                        #4878CA;
+    lightfg:                     #FFF2D8;
+    lightbg:                     #DCABA4;
+    foreground:                  #E6917D;
+    background:                  #51363B;
+    background-color:            #51363B80;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @foreground;
+    selected-normal-foreground:  @blue;
     selected-normal-background:  @orange;
     selected-active-foreground:  @background;
-    selected-active-background:  @orange;
+    selected-active-background:  @fuchsia;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
-    normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-foreground:           @background;
+    normal-background:           @lightbg;
     active-foreground:           @blue;
     active-background:           @red;
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
+    alternate-normal-background: @red;
     alternate-active-foreground: @red;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -40,9 +41,9 @@
 window {
     background-color: @background;
     border:           10 0 0 0;
-    padding:          10 0 0 0;
-    x-offset:         -100;
-    y-offset:         -60;
+    padding:          6 0 0 0;
+    x-offset:         40;
+    y-offset:         300;
 }
 mainbox {
     border:           10 0 0 0;
@@ -60,12 +61,12 @@ listview {
     fixed-height:     0;
     border:           6px 0px 0px 0px ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          6px ;
     scrollbar:        false;
-    padding:          4px 0px 0px 0px;
+    padding:          0px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2.5em ;
 }
 element-text{
     horizontal-align: 0.50;
@@ -74,7 +75,7 @@ element {
     orientation: vertical;
 }
 element {
-    border:           10 0 0 0;
+    border:           10 0 10 0;
     padding:          5px ;
 }
 element normal.normal {
@@ -133,28 +134,29 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
+    padding:          5px ;
     border-spacing:   0 0 0 0;
     border:           5px;
     spacing:          10px;
-    margin:           5px 5px 5px;
+    margin:           5px 0px 5px 0px ;
     border-color:     @foreground;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
     case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @lightfg;
 }
 textbox-prompt-colon {
     expand:           false;
+    text-color:       @lightfg;
     str:              ":";
     margin:           0px 0.3000em 0.0000em 0.0000em ;
     text-color:       inherit;

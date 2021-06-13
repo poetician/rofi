@@ -7,13 +7,13 @@
  */
 
 * {
-    red:                         rgba ( 176, 121, 89, 100 % );
-    blue:                        rgba ( 141, 155, 161, 50 % );
-    lightfg:                     rgba ( 144, 146, 147, 100 % );
-    lightbg:                     rgba ( 33, 36, 39, 50 % );
-    foreground:                  rgba ( 158, 160, 176, 100 % );
-    background:                  rgba ( 33, 36, 39, 20 % );
-    background-color:            rgba ( 33, 36, 39, 20 % );
+    red:                         #B07959;
+    blue:                        #8D9BA190;
+    lightfg:                     #909293;
+    lightbg:                     #21242780;
+    foreground:                  #9EA0B0;
+    background:                  #21242733;
+    background-color:            #21242733;
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
@@ -41,8 +41,8 @@ window {
     border:           5;
     border-radius:    10;
     padding:          5;
-    x-offset:         40px;
-    y-offset:         -60px;
+    x-offset:         0px;
+    y-offset:         60px;
 }
 mainbox {
     border:           1;

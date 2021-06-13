@@ -154,7 +154,8 @@ inputbar {
     background-color: @black;
     border-color:     @white;
     text-color:       @white;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
 case-indicator {
     spacing:          0;
     text-color:       @white;

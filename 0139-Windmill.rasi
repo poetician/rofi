@@ -40,6 +40,7 @@ window {
     background-color: @background;
     border:           15;
     padding:          0;
+    y-offset:         240;
 }
 mainbox {
     border:           10;
@@ -62,14 +63,17 @@ listview {
     padding:          2px 0px 0px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2.5em ;
+}
+element-text{
+    horizontal-align: 0.50;
 }
 element {
-  orientation: vertical;
+    orientation: horizontal;
 }
 element {
     border:           5;
-    padding:          0px ;
+    padding:          5px ;
 }
 element normal.normal {
     background-color: @normal-background;

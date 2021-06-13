@@ -7,23 +7,18 @@
  */
 
 * {
-    clear:                       #00000000;
-    orange:                      #AE3B204d;
-    orange2:                     #AE3B20;
-    black:                       #00000080;
-    green:                       #373F101a;
-    red:                         #CD162333;
-    blue:                        #9AA2D066;
-    lightfg:                     #D7D6D280;
-    lightbg:                     #CFC3B740;
-    foreground:                  #2F2F17b3;
-    background:                  #CEA9974d;
-    background-color:            #F7D9BD66;
-    separatorcolor:              @lightfg;
-    border-color:                @orange;
-    selected-normal-foreground:  @foreground;
-    selected-normal-background:  @green;
-    selected-active-foreground:  @orange2;
+    red:                         #9E572733;
+    blue:                        #83A3AE;
+    lightfg:                     #E6E7E433;
+    lightbg:                     #35414Acc;
+    foreground:                  #FFFAF1b3;
+    background:                  #35414A1a;
+    background-color:            #F17B8D33;
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
@@ -34,7 +29,7 @@
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @blue;
+    alternate-normal-background: @lightbg;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
@@ -43,22 +38,22 @@
 }
 window {
     background-color: @background;
-    border:           4 8 14 7 ;
-    border-radius:    6 6 12 12 ;
-    padding:          3 12 9 6 ;
-    x-offset:         30px;
-    y-offset:         50px;
+    border:           4 dash 8 16 ;
+    border-radius:    4 4 20 20 ;
+    padding:          8 24 16 24;
+    x-offset:         -20px;
+    y-offset:         60px;
 }
 mainbox {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          3 12 9 6 ;
+    border:           4 dash 7 12;
+    border-radius:    4 4 16 16 ;
+    padding:          7 20 14 20 ;
 }
 message {
-    border:           4 8 14 7 ;
-    border-radius:    10 20 20 10;
-    border-color:     @orange;
-    padding:          2 20 5 2 ;
+    border:           3 dash 6 10;
+    border-radius:    4 4 12 12 ;
+    border-color:     @separatorcolor;
+    padding:          7 20 14 20 ;
 }
 textbox {
     text-color:       @foreground;
@@ -74,17 +69,17 @@ element-text {
 }
 listview {
     fixed-height:     0;
-    border:           4 8 14 7 ;
-    border-radius:    12 12 24 24 ;
-    border-color:     @orange;
+    border:           3 dash 6 10;
+    border-radius:    4 4 12 12 ;
+    border-color:     @separatorcolor;
     spacing:          12px ;
     scrollbar:        false;
-    padding:          3 12 9 6 ;
+    padding:          6 16 12 16 ;
 }
 element {
-    border:           4 8 14 7 ;
-    border-radius:    9 9 18 18 ;
-    padding:          2 25 5 2;
+    border:           2 dash 4 8;
+    border-radius:    4 4 12 12 ;
+    padding:          5 13 10 13 ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -124,13 +119,13 @@ element alternate.active {
 }
 scrollbar {
     width:            0px ;
-    border:           4 8 14 7 ;
+    border:           1 6 12 2;
     handle-color:     @normal-foreground;
     handle-width:     8px ;
     padding:          0;
 }
 sidebar {
-    border:           4 8 14 7 ;
+    border:           1 6 12 2;
     border-color:     @separatorcolor;
 }
 button {
@@ -142,36 +137,30 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    background-color: @clear;
-    border:           4 8 14 7 ;
-    border-radius:    10 20 30 10;
-    padding:          2 25 5 2;
-    border-spacing:   5px 0 0 0;
-    spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @orange;
+    border:           2 dash 3 6;
+    border-radius:    4 4 8 8 ;
+    padding:          4 9 6 9 ;
+    border-spacing:   4px ;
+    spacing:          4 4 4 4 ;
+    margin:           2 12 5 12 ;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
     case-indicator {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 entry {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 prompt {
     spacing:          0;
     text-color:       @normal-foreground;
-    background-color: @clear;
 }
 textbox-prompt-colon {
     expand:           false;
     str:              ":";
-    background-color: @clear;
     margin:           0px 0.3000em 0.0000em 0.0000em ;
     text-color:       inherit;
 }

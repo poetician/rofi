@@ -42,7 +42,7 @@ window {
     border-radius:    20;
     padding:          0 0 0 0;
     x-offset:         -40;
-    y-offset:         -20;
+    y-offset:         60;
 }
 mainbox {
     border:           0 1 0 10;

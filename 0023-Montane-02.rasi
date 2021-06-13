@@ -42,13 +42,13 @@ window {
     background-color: @background;
     border:           10;
     border-radius:    20;
-    padding:          30;
-    x-offset:         -80;
-    y-offset:         -40;
+    padding:          10;
+    x-offset:         0;
+    y-offset:         40;
 }
 mainbox {
     border:           10;
-    border-radius:    20;
+    border-radius:    12;
     padding:          10;
 }
 message {
@@ -65,17 +65,12 @@ listview {
     border:           10px dash 0px 0px ;
     border-radius:    20;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          20px ;
     scrollbar:        false;
-    padding:          3px 0px 0px ;
-}
-element {
-    border:           0;
-    border-radius:    20;
-    padding:          20px ;
+    padding:          10px 1px 0px 1px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
   orientation: horizontal;
@@ -84,8 +79,8 @@ element-text {
       vertical-align: 0.45;
 }
 element {
-    border:           20;
-    border-color:     @background;
+    border:           5 5 10 5 ;
+    border-color:     @lightblue;
     border-radius:    20;
     padding:          10px ;
 }
@@ -145,9 +140,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
+    padding:          5 ;
+    border-spacing:   10 4 10 4;
+    border:           10px dash 0px 0px ;
+    border-radius:    9 ;
+    spacing:          20px ;
+    margin:           0px 5px 0px 5px ;
+    border-color:     @foreground;
     text-color:       @normal-foreground;
-    padding:          1px ;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

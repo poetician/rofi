@@ -44,8 +44,8 @@ window {
     border:           0 5 20 5 ;
     border-radius:    0 0 10 10 ;
     padding:          0 5 0 5 ;
-    x-offset:         0px;
-    y-offset:         -80px;
+    x-offset:         60px;
+    y-offset:         300px;
 }
 mainbox {
     border-color:     @foreground;
@@ -145,12 +145,12 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          0px 0px 10px 10px ;
+    padding:          10px 0px 10px 10px ;
     border-spacing:   4 ;
     border:           0 5 10 5 ;
     border-radius:    0 0 10 10 ;
-    spacing:          10px;
-    margin:           5px 5px 5px;
+    spacing:          10 0 10 0 ;
+    margin:           5px 0px 5px 0px;
     border-color:     @foreground;
     text-color:       @foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];

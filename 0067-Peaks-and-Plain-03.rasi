@@ -7,16 +7,17 @@
  */
 
 * {
-    red:                         rgba ( 240, 126, 49, 20 % );
-    blue:                        rgba ( 53, 65, 74, 60 % );
-    lightfg:                     rgba ( 230, 231, 228, 20 % );
-    lightbg:                     rgba ( 53, 65, 74, 100 % );
-    foreground:                  rgba ( 255, 255, 255, 70 % );
-    background:                  rgba ( 53, 65, 74, 10 % );
-    background-color:            rgba ( 241, 123, 41, 20 % );
+    seltext:                     #F6DABE;
+    red:                         #F07E2833;
+    blue:                        #35414A99;
+    lightfg:                     #E6E7E433;
+    lightbg:                     #35414A;
+    foreground:                  #ffffffb3;
+    background:                  #35414A1a;
+    background-color:            #F17B2933;
     separatorcolor:              @foreground;
     border-color:                @foreground;
-    selected-normal-foreground:  @lightbg;
+    selected-normal-foreground:  @seltext;
     selected-normal-background:  @lightfg;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
@@ -41,12 +42,12 @@ window {
     border:           2 20 5 1;
     border-radius:    10 15 10 10;
     padding:          5 15 5 10;
-    x-offset:         -60px;
-    y-offset:         -30px;
+    x-offset:         0px;
+    y-offset:         -120px;
 }
 mainbox {
-    border:           2 10 5 1;
-    border-radius:    10 15 10 10;
+    border:           2 15 5 1;
+    border-radius:    10 10 10 10;
     padding:          5 15 5 10;
 }
 message {
@@ -59,7 +60,7 @@ textbox {
     text-color:       @foreground;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
   orientation: horizontal;
@@ -78,7 +79,7 @@ listview {
 }
 element {
     border:           2 10 5 1;
-    border-radius:    5 15 10 10;
+    border-radius:    5 10 10 10;
     padding:          5 15 5 10 ;
 }
 element normal.normal {
@@ -138,11 +139,11 @@ button selected {
 }
 inputbar {
     border:           2 10 5 1;
-    border-radius:    10 15 10 10;
+    border-radius:    5 ;
     padding:          5 15 5 10 ;
     border-spacing:   0 0 0 0;
-    spacing:          5px;
-    margin:           5px 5px 5px;
+    spacing:          0px 5px 0px 5px ;
+    margin:           5px 0px 5px 0px;
     border-color:     @foreground;
     text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}

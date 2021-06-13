@@ -41,13 +41,13 @@
 }
 window {
     background-color: @background;
-    border:           10 0 0 0;
-    padding:          10 0 0 0;
-    x-offset:         -100;
-    y-offset:         -60;
+    border:           0 0 10 0;
+    padding:          0 0 2 0;
+    x-offset:         40;
+    y-offset:         300;
 }
 mainbox {
-    border:           10 0 0 0;
+    border:           9 0 0 0;
     padding:          0;
 }
 message {
@@ -60,14 +60,14 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           6px 0px 0px 0px ;
+    border:           7px 0px 0px 0px ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          5px ;
     scrollbar:        false;
-    padding:          4px 0px 0px 0px;
+    padding:          5px 0px 5px 0px;
 }
 element-icon {
-    size:             3em ;
+    size:             2.5em ;
 }
 element-text{
     horizontal-align: 0.50;
@@ -76,8 +76,8 @@ element {
     orientation: vertical;
 }
 element {
-    border:           10 0 0 0;
-    padding:          5px ;
+    border:           7 0 0 0 ;
+    padding:          5 ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -137,9 +137,9 @@ button selected {
 inputbar {
     padding:          5px;
     border-spacing:   0 0 0 0;
-    border:           5px;
+    border:           6 5 6 5 ;
     spacing:          10px;
-    margin:           5px 5px 5px;
+    margin:           5px 0px 5px 0px ;
     border-color:     @foreground;
     text-color:       @normal-foreground;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];

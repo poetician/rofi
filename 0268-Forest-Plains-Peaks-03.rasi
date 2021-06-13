@@ -7,6 +7,7 @@
  */
 
 * {
+    text:                        #F9DA62;
     black:                       #000000;
     red:                         #D0571B80;
     blue:                        #5E94AE80;
@@ -42,8 +43,8 @@ window {
     border:           7;
     border-radius:    36 36 1 1;
     padding:          5;
-    x-offset:         -40;
-    y-offset:         -20;
+    x-offset:         40;
+    y-offset:         40;
 }
 mainbox {
     border:           7;
@@ -68,7 +69,7 @@ listview {
     padding:          7px 5px 5px ;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
     orientation: horizontal;
@@ -144,20 +145,20 @@ inputbar {
     spacing:          20px;
     margin:           5px 5px 5px;
     border-color:     @black;
-    text-color:       @black;
+    text-color:       @text;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @black;
+    text-color:       @text;
 }
 entry {
     spacing:          0;
-    text-color:       @black;
+    text-color:       @text;
 }
 prompt {
     spacing:          0;
-    text-color:       @black;
+    text-color:       @text;
 }
 textbox-prompt-colon {
     expand:           false;

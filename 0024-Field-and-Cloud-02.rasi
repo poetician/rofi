@@ -7,6 +7,7 @@
  */
 
 * {
+    clear:                       #00000000;
     red:                         rgba ( 54, 74, 88, 70 % );
     blue:                        rgba ( 173, 203, 198, 80 % );
     lightfg:                     rgba ( 186, 209, 203, 90 % );
@@ -37,52 +38,50 @@
     spacing:                     2;
 }
 window {
-    background-color: @background;
-    border:           5;
-    padding:          5;
+    background-color: @clear;
+    border:           0 0 5 5 ;
+    border-radius:    0 0 0 15 ;
+    padding:          0 0 5 5 ;
+    x-offset:         30;
+    y-offset:         40;
 }
 mainbox {
-    border:           5;
-    border-radius:    5;
-    padding:          10;
+    border:           0 0 5 5 ;
+    border-radius:    0 0 0 20 ;
+    padding:          0 0 5 5 ;
 }
 message {
-    border:           5px dash 0px 0px ;
-    border-radius:    25;
+    border:           0 0 5 5 ;
+    border-radius:    0 0 0 20 ;
     border-color:     @separatorcolor;
-    padding:          1px ;
+    padding:          0 0 5 5 ;
 }
 textbox {
     text-color:       @foreground;
 }
 listview {
     fixed-height:     0;
-    border:           4px dash 0px 0px ;
-    border-radius:    25;
+    border:           0 0 5 5 ;
+    border-radius:    0 0 0 15 ;
     border-color:     @separatorcolor;
-    spacing:          2px ;
+    spacing:          5px ;
     scrollbar:        false;
-    padding:          4px 0px 0px ;
+    padding:          0 0 5 5 ;
 }
 element {
-    border:           1;
-    border-radius:    20;
-    padding:          20px ;
+    border:           0 0 5 5 ;
+    border-color:     @separatorcolor;
+    border-radius:    0 0 0 10 ;
+    padding:          0 0 5 5 ;
 }
 element-icon {
-    size:             3em ;
+    size:             2em ;
 }
 element {
-  orientation:        vertical;
+  orientation:        horizontal;
 }
 element-text {
-      horizontal-align: 0.45;
-}
-element {
-    border:           20;
-    border-color:     @background;
-    border-radius:    20;
-    padding:          10px ;
+      vertical-align: 0.45;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -140,9 +139,14 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
+    padding:          0 0 5 5 ;
+    border-spacing:   0 0 0 0;
+    border:           0 0 5 5 ;
+    border-radius:    0 0 0 10 ;
+    spacing:          10px;
+    margin:           0px 0px 5px 0px ;
+    border-color:     @foreground;
+    text-color:       @black;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
