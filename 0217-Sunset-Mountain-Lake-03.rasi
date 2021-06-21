@@ -7,15 +7,16 @@
  */
 
 * {
-    orange:                      #FE727180;
-    black:                       #000000b3;
+    clear:                       #00000000;
+    orange:                      #FE727199;
+    black:                       #1d140b;
     red:                         #f74a3680;
-    blue:                        #99cbeb66;
-    lightfg:                     #cdc8c9;
-    lightbg:                     #6666664d;
+    blue:                        #99cbeb99;
+    lightfg:                     #cdc8c9ec;
+    lightbg:                     #666666b3;
     foreground:                  #cdc8c9b3;
-    background:                  #333333b3;
-    background-color:            #33333300;
+    background:                  #33333333;
+    background-color:            #33333333;
     separatorcolor:              @foreground;
     border-color:                @orange;
     selected-normal-foreground:  @foreground;
@@ -40,16 +41,16 @@
 }
 window {
     background-color: @blue;
-    border:           4 8 16 8;
-    border-radius:    20;
-    padding:          8;
+    border:           4 12 16 12;
+    border-radius:    12;
+    padding:          12;
     x-offset:         40;
     y-offset:         0;
 }
 mainbox {
-    border:           4 8 16 8;
-    border-radius:    8;
-    padding:          4;
+    border:           4 12 16 12;
+    border-radius:    12;
+    padding:          12;
 }
 message {
     border:           2px dash 4px 8px ;
@@ -63,26 +64,26 @@ textbox {
 }
 listview {
     fixed-height:     0;
-    border:           2 4 8 4;
-    border-radius:    8;
+    border:           4 12 16 12;
+    border-radius:    12;
+    padding:          12;
     border-color:     @separatorcolor;
     spacing:          12px ;
     scrollbar:        false;
-    padding:          4px 2px 4px 2px ;
 }
 element-icon {
-    size:             1.6em ;
+    size:             2em ;
 }
 element {
   orientation: horizontal;
 }
 element-text {
-      vertical-align: 0.45;
+      vertical-align: 0.4;
 }
 element {
-    border:           4 8 16 8;
-    border-radius:    8;
-    padding:          2;
+    border:           4 12 16 12;
+    border-radius:    12;
+    padding:          12;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -142,31 +143,29 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
-    border-spacing:   4 8 16 8;
-    border:           2 4 8 4;
-    border-radius:    40%;
-    spacing:          10px;
-    margin:           5px 5px 5px;
-    padding:          4;
-    border-color:     @foreground;
-    text-color:       @normal-foreground;
-    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];}
-case-indicator {
-    spacing:          0;
-    text-color:       @normal-foreground;
+    background-color: @lightfg;
+    border-spacing:   4 8 16 8 ;
+    border:           4 ;
+    border-radius:    12 ;
+    padding:          4 ;
+    spacing:          0px ;
+    margin:           4 ;
+    padding:          4 ;
+    border-color:     @lightbg;
+    text-color:       @black;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @black;
 }
 textbox-prompt-colon {
     expand:           false;
