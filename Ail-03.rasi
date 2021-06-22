@@ -7,10 +7,12 @@
  */
 
 * {
+    lbg:                         #2828284d;
+    text:                        #120202;
     red:                         #12020299;
     blue:                        #6a5d6699;
     lightfg:                     #6a5d6600;
-    lightbg:                     #28282866;
+    lightbg:                     #28282899;
     foreground:                  #373356b3;
     background:                  #bcb5b1;
     background-color:            #bcb5b100;
@@ -23,7 +25,7 @@
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
-    normal-background:           @background;
+    normal-background:           @lbg;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
@@ -38,15 +40,15 @@
 }
 window {
     background-color: @background;
-    border:           15;
-    border-radius:    10;
+    border:           10;
+    border-radius:    25;
     padding:          5;
-    x-offset:         40px;
-    y-offset:         -40px;
+    x-offset:         0px;
+    y-offset:         -10px;
 }
 mainbox {
-    border:           15;
-    border-radius:    10;
+    border:           10;
+    border-radius:    15;
     padding:          5;
 }
 message {
@@ -79,8 +81,8 @@ element-text {
       horizontal-align: 0.5;
 }
 element {
-    border:           15;
-    border-radius:    10;
+    border:           5 0 5 0;
+    border-radius:    0;
     padding:          5px ;
 }
 element normal.normal {
@@ -139,22 +141,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    spacing:          0px;
-    text-color:       @normal-foreground;
-    padding:          1px ;
+    padding:          12px;
+    border-spacing:   6;
+    border:           6px ;
+    border-radius:    12 ;
+    spacing:          12px;
+    margin:           0 0 6 0 ;
+    border-color:     @foreground;
+    text-color:       @text;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @text;
 }
 entry {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @text;
 }
 prompt {
     spacing:          0;
-    text-color:       @normal-foreground;
+    text-color:       @text;
 }
 textbox-prompt-colon {
     expand:           false;
