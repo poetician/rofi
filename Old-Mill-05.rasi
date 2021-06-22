@@ -7,86 +7,85 @@
  */
 
 * {
-    dargreen:                    #2B3D0E80;
-    green:                       #345D134d;
-    brown:                       #593201;
+    text:                        #FAE8D099;
+    green:                       #C2C93A4d;
     red:                         #7E4B22cc;
     blue:                        #5C5C3Ccc;
-    lightfg:                     #F6DABE4d;
-    lightbg:                     #0000004d;
-    foreground:                  #FDEEE2;
-    background:                  #56321F33;
-    background-color:            #56321F1a;
+    lightfg:                     #F0EFE699;
+    lightbg:                     #00000080;
+    foreground:                  #EBEAEB80;
+    background:                  #220C0099;
+    background-color:            #220C0033;
     separatorcolor:              @foreground;
-    border-color:                @lightfg;
-    selected-normal-foreground:  @foreground;
-    selected-normal-background:  @lightfg;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @text;
     selected-active-foreground:  @background;
     selected-active-background:  @blue;
     selected-urgent-foreground:  @background;
     selected-urgent-background:  @red;
     normal-foreground:           @foreground;
-    normal-background:           @dargreen;
+    normal-background:           @lightfg;
     active-foreground:           @blue;
     active-background:           @background;
     urgent-foreground:           @red;
     urgent-background:           @background;
     alternate-normal-foreground: @foreground;
-    alternate-normal-background: @lightbg;
+    alternate-normal-background: @green;
     alternate-active-foreground: @blue;
     alternate-active-background: @lightbg;
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
-    spacing:                     2;
+    spacing:                     4;
 }
 window {
     background-color: @background;
-    border:           5;
-    border-radius:    10;
-    padding:          15;
+    border:           4;
+    border-radius:    9;
+    padding:          12;
     x-offset:         40px;
-    y-offset:         -80px;
+    y-offset:         -60px;
 }
 mainbox {
-    border:           5;
-    border-radius:    10;
-    padding:          15;
+    border:           4;
+    border-radius:    9;
+    padding:          9;
 }
 message {
     border:           5px dash 0px 0px ;
-    border-radius:    10;
+    border-radius:    9;
     border-color:     @separatorcolor;
-    padding:          15px ;
+    padding:          4px ;
 }
 textbox {
     text-color:       @foreground;
     border:           5px;
-    border-radius:    10px;
+    border-radius:    9px;
     padding:          10px;
 }
 listview {
     fixed-height:     0;
     border:           5px dash 5px 5px ;
-    border-radius:    10;
+    border-radius:    9;
     border-color:     @separatorcolor;
     spacing:          15px ;
     scrollbar:        false;
-    padding:          15px 15px 15px ;
+    padding:          9px 12px 15px ;
 }
 element-icon {
-    size:             2.5em ;
+    size:             3.3em ;
 }
 element {
-    orientation: horizontal;
+  orientation: horizontal;
 }
 element-text {
-    vertical-align: 0.5;
+      vertical-align: 0.45;
 }
 element {
-    border:           5;
-    border-radius:    10;
+    border:           4;
+    border-radius:    9;
     border-color:     @red;
-    padding:          5px ;
+    padding:          8px ;
 }
 element normal.normal {
     background-color: @normal-background;
@@ -144,27 +143,27 @@ button selected {
     text-color:       @selected-normal-foreground;
 }
 inputbar {
-    padding:          5px;
-    border-spacing:   0 0 0 0;
-    border:           5px;
-    border-radius:    10;
-    spacing:          10px;
-    margin:           5px 5px 5px;
-    border-color:     @foreground;
-    text-color:       @foreground;
+    padding:          12px;
+    border-spacing:   6px;
+    border:           4px ;
+    border-radius:    9;
+    spacing:          12px;
+    margin:           9px;
+    border-color:     @green;
+    text-color:       @text;
     children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {
     spacing:          0;
-    text-color:       @foreground;
+    text-color:       @text;
 }
 entry {
     spacing:          0;
-    text-color:       @foreground;
+    text-color:       @text;
 }
 prompt {
     spacing:          0;
-    text-color:       @foreground;
+    text-color:       @text;
 }
 textbox-prompt-colon {
     expand:           false;
